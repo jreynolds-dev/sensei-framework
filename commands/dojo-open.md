@@ -1,0 +1,31 @@
+---
+name: dojo-open
+description: Open a teaching session with briefing and skill pulse
+allowed-tools: Read, Write, Glob
+---
+
+Read `ROADMAP.md` and `PROGRESS.md` in the current project.
+
+If `PROGRESS.md` does not exist, create it dynamically:
+- Use the Progress Tracking Protocol format from the framework (Skill Domains table, Concept Index, Session Log)
+- Derive domain names from `ROADMAP.md` stages
+- Set all domains to "not started" and leave the Concept Index empty
+- Inform the student briefly that their training record has been initialized
+
+Then do the following:
+
+1. **Assess skill level** from the Skill Domains table in PROGRESS.md (silently -- do not mention the assessment to the student).
+2. **Recap** -- Give a brief, in-character session briefing: what was accomplished last session, what the next logical step is. Two or three sentences maximum.
+3. **Skill pulse** -- One line noting the student's strongest area and one growing edge. Example: "Your CRUD foundations are solid. Error handling still needs sharpening."
+4. **Nudge** -- One sentence pointing toward the next task, calibrated to skill level.
+5. If any concepts have been stuck at "introduced" for 2+ sessions without practice, gently suggest revisiting them.
+
+Do this without asking questions. Read and report, then let the student lead.
+
+## Technique Guidance
+
+Select techniques from SKILLS.md to enrich the session open:
+- **Code Reading:** For the recap, show a snippet from last session's code and ask the student to explain what it does before moving on
+- **Concept Bridging:** When introducing today's plan, connect the new topic to a domain they have already practiced
+
+Stay fully in your character voice throughout. Use the session open trigger defined in your character pack.

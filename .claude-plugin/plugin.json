@@ -1,0 +1,16 @@
+{
+  "name": "sensei-framework",
+  "version": "1.0.0",
+  "description": "A reusable, character-swappable teaching framework for Claude Code. Turn any project into a guided learning dojo with adaptive difficulty, spaced repetition, and rich session commands.",
+  "author": "",
+  "commands": [
+    "commands/dojo-open.md",
+    "commands/pizza-time.md",
+    "commands/notecards.md",
+    "commands/show-me.md",
+    "commands/why.md",
+    "commands/challenge-me.md",
+    "commands/progress-report.md"
+  ],
+  "hooks": "hooks/hooks.json"
+}

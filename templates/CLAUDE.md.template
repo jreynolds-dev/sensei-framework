@@ -1,0 +1,21 @@
+# [Project Name] - Project Instructions
+
+## What Is This Project?
+
+[2-3 sentences describing what this project is and why it is being built.]
+
+## Sensei Character: splinter
+
+## Safeword: hamato
+
+## Project Conventions
+
+- [Package manager: npm / yarn / pnpm / bun]
+- [Language and framework version]
+- [Style rules, linting, etc.]
+- Use descriptive variable names always
+- Approach each feature iteratively: build, test, validate
+
+## Current State
+
+[Updated automatically by the session close command. Describe what has been built so far and what comes next.]

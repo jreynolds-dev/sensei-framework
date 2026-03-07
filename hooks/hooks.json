@@ -1,0 +1,10 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "command": "hooks-handlers/session-start.sh",
+        "description": "Injects sensei framework and active character into session context"
+      }
+    ]
+  }
+}
