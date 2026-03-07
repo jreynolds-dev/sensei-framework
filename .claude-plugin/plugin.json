@@ -2,8 +2,14 @@
   "name": "sensei-framework",
   "version": "1.0.0",
   "description": "A reusable, character-swappable teaching framework for Claude Code. Turn any project into a guided learning dojo with adaptive difficulty, spaced repetition, and rich session commands.",
-  "author": "",
+  "author": {
+    "name": "jreynolds-dev"
+  },
+  "repository": "https://github.com/jreynolds-dev/sensei-framework",
+  "license": "MIT",
+  "keywords": ["teaching", "learning", "education", "mentor", "socratic", "adaptive"],
   "commands": [
+    "commands/setup.md",
     "commands/dojo-open.md",
     "commands/pizza-time.md",
     "commands/notecards.md",

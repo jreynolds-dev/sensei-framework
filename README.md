@@ -27,16 +27,14 @@ Layer 3: Project Config    -- Your CLAUDE.md with project description, conventio
 ### Option A: Plugin Install (Recommended)
 
 ```bash
-claude plugin install github:jreynolds-dev/sensei-framework
+# Add the marketplace (one-time)
+claude plugin marketplace add github:jreynolds-dev/sensei-framework
+
+# Install the plugin
+claude plugin install sensei-framework
 ```
 
-Then in your project:
-
-```bash
-/setup
-```
-
-This creates your `CLAUDE.md` (with character selection and safeword) and `ROADMAP.md` from templates. `PROGRESS.md` is created automatically on first `/dojo-open`.
+Then in your project, run `/setup` -- it walks you through character selection and creates your `CLAUDE.md` and `ROADMAP.md`. `PROGRESS.md` is created automatically on first `/dojo-open`.
 
 ### Option B: Manual Assembly
 
