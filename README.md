@@ -28,7 +28,7 @@ Layer 3: Project Config    -- Your CLAUDE.md with project description, conventio
 
 ```bash
 # Add the marketplace (one-time)
-claude plugin marketplace add github:jreynolds-dev/sensei-framework
+claude plugin marketplace add jreynolds-dev/sensei-framework
 
 # Install the plugin
 claude plugin install sensei-framework
