@@ -9,14 +9,14 @@
   "license": "MIT",
   "keywords": ["teaching", "learning", "education", "mentor", "socratic", "adaptive"],
   "commands": [
-    "commands/setup.md",
-    "commands/dojo-open.md",
-    "commands/pizza-time.md",
-    "commands/notecards.md",
-    "commands/show-me.md",
-    "commands/why.md",
-    "commands/challenge-me.md",
-    "commands/progress-report.md"
+    "./commands/setup.md",
+    "./commands/dojo-open.md",
+    "./commands/pizza-time.md",
+    "./commands/notecards.md",
+    "./commands/show-me.md",
+    "./commands/why.md",
+    "./commands/challenge-me.md",
+    "./commands/progress-report.md"
   ],
-  "hooks": "hooks/hooks.json"
+  "hooks": "./hooks/hooks.json"
 }
