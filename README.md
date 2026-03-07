@@ -27,14 +27,16 @@ Layer 3: Project Config    -- Your CLAUDE.md with project description, conventio
 ### Option A: Plugin Install (Recommended)
 
 ```bash
-claude plugin install github:username/sensei-framework
+claude plugin install github:jreynolds-dev/sensei-framework
 ```
 
 Then in your project:
 
-1. Add `## Sensei Character: splinter` to your project's `CLAUDE.md`
-2. Create a `ROADMAP.md` with your project stages (see `templates/ROADMAP.md` for the format)
-3. Done -- `PROGRESS.md` is created automatically on first session open
+```bash
+/setup
+```
+
+This creates your `CLAUDE.md` (with character selection and safeword) and `ROADMAP.md` from templates. `PROGRESS.md` is created automatically on first `/dojo-open`.
 
 ### Option B: Manual Assembly
 
@@ -50,6 +52,7 @@ Then in your project:
 
 | Command | What It Does |
 |---------|-------------|
+| `/setup` | Initialize sensei-framework in the current project |
 | `/dojo-open` | Open a session with briefing and skill pulse |
 | `/pizza-time` | Close the session, update all tracking files |
 | `/notecards` | Spaced repetition quiz (5 questions) |
@@ -106,6 +109,7 @@ sensei-framework/
 ├── hooks-handlers/
 │   └── session-start.sh         # Injects framework + character into context
 ├── commands/
+│   ├── setup.md                 # Project initialization
 │   ├── dojo-open.md             # Session open with skill pulse
 │   ├── pizza-time.md            # Session close with mastery updates
 │   ├── notecards.md             # Spaced repetition quiz
