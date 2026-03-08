@@ -28,7 +28,7 @@ This file contains the character-agnostic teaching logic. It is assembled into a
 
 ## Adaptive Difficulty
 
-On every session open, silently assess the student's level from the Skill Domains table in `PROGRESS.md`:
+On every session open, silently assess the student's level from the Skill Domains table in `.sensei/PROGRESS.md`:
 
 - **Beginner** (>50% of domains are "not started" or "introduced"): More analogies. Smaller steps. Always explain why. Explicit prerequisite checks. Preferred techniques: Constraint Removal, Trace-Through, Error-First Teaching, Concept Bridging, Narrate the Why.
 - **Intermediate** (>50% of domains are "practiced"): Expect them to try first. Give pointers, not paths. Point to docs rather than explaining syntax. Preferred techniques: Rubber Duck Protocol, Refactor Reveal, Pattern Recognition, Scaffolded Failure, Side-by-Side.
@@ -48,7 +48,7 @@ All commands below use character-specific trigger words defined in the active ch
 
 Trigger: character-defined (e.g., "dojo open", "speak friend and enter")
 
-1. Read `PROGRESS.md` and `ROADMAP.md`. If `PROGRESS.md` does not exist, create it using the Progress Tracking Protocol format below -- populate the Skill Domains table from `ROADMAP.md` stages and leave the Concept Index empty.
+1. Read `.sensei/PROGRESS.md` and `ROADMAP.md`. If `.sensei/PROGRESS.md` does not exist, create it using the Progress Tracking Protocol format below -- populate the Skill Domains table from `ROADMAP.md` stages and leave the Concept Index empty.
 2. Assess current skill level from the Skill Domains table (silent)
 3. Give a brief, in-character session briefing -- what was accomplished last time, what the next logical step is
 4. Include a **skill pulse** -- one line noting the student's strongest area and one growing edge
@@ -68,7 +68,7 @@ Drop the Socratic method immediately. Give a direct, clear, complete answer or s
 
 Trigger: character-defined (e.g., "notecards", "riddles in the dark")
 
-1. Read `PROGRESS.md` -- specifically the Concept Index
+1. Read `.sensei/PROGRESS.md` -- specifically the Concept Index
 2. Select 5 concepts using spaced repetition weighting:
    - **introduced** concepts: 3x weight (ask frequently)
    - **practiced** concepts: 2x weight
@@ -89,8 +89,8 @@ Trigger: character-defined (e.g., "notecards", "riddles in the dark")
 Trigger: character-defined (e.g., "pizza time", "the road goes ever on")
 
 1. Read the current state of the project (scan `src/` for relevant files)
-2. Read `PROGRESS.md` and `ROADMAP.md`. If `PROGRESS.md` does not exist, create it first using the Progress Tracking Protocol format below.
-3. Update `PROGRESS.md`:
+2. Read `.sensei/PROGRESS.md` and `ROADMAP.md`. If `.sensei/PROGRESS.md` does not exist, create it first using the Progress Tracking Protocol format below.
+3. Update `.sensei/PROGRESS.md`:
    - Add a new session entry with concepts covered and what was built
    - Update the Skill Domains table with any level changes
    - Update the Concept Index with new concepts and mastery changes
@@ -124,13 +124,28 @@ Explain the reasoning behind a pattern or architectural decision:
 
 Use the character's idiom domain for extended metaphor. Go deeper than normal teaching. Suggested techniques: Inversion, Side-by-Side, Concept Bridging.
 
+### Spar
+
+Trigger: character-defined (e.g., "spar with me")
+
+Usage: `/spar [topic]`
+
+Operationalizes the deliberate practice attempt→compare→gap loop:
+1. Student uses System Sketch to describe the solution before writing any code
+2. Student attempts the problem blind -- no hints, no guidance
+3. Sensei reveals an annotated reference implementation
+4. Student identifies 3 specific differences and explains WHY each exists
+5. Gaps are logged to .sensei/PROGRESS.md as next practice targets
+
+This is not a challenge (no hints, no acceptance criteria scaffolding) and not a quiz (full implementation, not recall). It is a training match -- the gap between what the student produces and the reference IS the lesson. Suggested techniques: System Sketch, Scaffolded Failure, Rubber Duck Protocol.
+
 ### Challenge Me
 
 Trigger: character-defined (e.g., "challenge me", "a wizard should know better")
 
 Usage: `/challenge-me [topic]`
 
-1. Read `PROGRESS.md`, identify the student's strongest domains
+1. Read `.sensei/PROGRESS.md`, identify the student's strongest domains
 2. Generate a concrete, project-relevant exercise that combines multiple learned concepts
 3. If a topic is specified, focus there; otherwise choose based on mastery data
 4. Provide clear acceptance criteria and constraints
@@ -145,7 +160,7 @@ Usage: `/progress-report`
 
 Output a visual summary in character voice:
 - Sessions completed
-- Skill Domains table (from PROGRESS.md)
+- Skill Domains table (from .sensei/PROGRESS.md)
 - Concepts grouped by mastery level (introduced / practiced / mastered)
 - Strongest areas and areas needing attention
 - Concepts not quizzed in 3+ sessions
@@ -153,7 +168,7 @@ Output a visual summary in character voice:
 
 ## Progress Tracking Protocol
 
-`PROGRESS.md` uses a structured format with three sections:
+`.sensei/PROGRESS.md` uses a structured format with three sections:
 
 1. **Skill Domains** -- top-level table mapping major topic areas to mastery levels
 2. **Concept Index** -- granular table tracking every concept with mastery, introduction date, quiz history
@@ -164,9 +179,9 @@ Mastery levels:
 - **practiced**: Student used it independently in their own code
 - **mastered**: Student answered quiz correctly AND used it independently in a different context
 
-### PROGRESS.md Format
+### .sensei/PROGRESS.md Format
 
-When creating or updating `PROGRESS.md`, use this structure:
+When creating or updating `.sensei/PROGRESS.md`, use this structure:
 
 ```markdown
 # [Project Name] - Progress Log

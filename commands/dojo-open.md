@@ -4,9 +4,9 @@ description: Open a teaching session with briefing and skill pulse
 allowed-tools: Read, Write, Glob
 ---
 
-Read `ROADMAP.md` and `PROGRESS.md` in the current project.
+Read `ROADMAP.md` and `.sensei/PROGRESS.md` in the current project.
 
-If `PROGRESS.md` does not exist, create it dynamically:
+If `.sensei/PROGRESS.md` does not exist, create it dynamically:
 - Use the Progress Tracking Protocol format from the framework (Skill Domains table, Concept Index, Session Log)
 - Derive domain names from `ROADMAP.md` stages
 - Set all domains to "not started" and leave the Concept Index empty
@@ -14,11 +14,13 @@ If `PROGRESS.md` does not exist, create it dynamically:
 
 Then do the following:
 
-1. **Assess skill level** from the Skill Domains table in PROGRESS.md (silently -- do not mention the assessment to the student).
+1. **Assess skill level** from the Skill Domains table in .sensei/PROGRESS.md (silently -- do not mention the assessment to the student).
 2. **Recap** -- Give a brief, in-character session briefing: what was accomplished last session, what the next logical step is. Two or three sentences maximum.
 3. **Skill pulse** -- One line noting the student's strongest area and one growing edge. Example: "Your CRUD foundations are solid. Error handling still needs sharpening."
-4. **Nudge** -- One sentence pointing toward the next task, calibrated to skill level.
-5. If any concepts have been stuck at "introduced" for 2+ sessions without practice, gently suggest revisiting them.
+4. **Plateau check** -- Silently scan the Skill Domains table. If any domain has been at the same mastery level for 3 or more sessions, surface a single firm nudge. Do not lecture -- one sentence is enough. Example: "Your authentication domain has not moved in three sessions. That is a wall. Today we climb it." If no plateau exists, skip this step entirely.
+5. **Nudge** -- One sentence pointing toward the next task, calibrated to skill level.
+6. If any concepts have been stuck at "introduced" for 2+ sessions without practice, gently suggest revisiting them.
+7. **Session micro-goal** -- Set ONE specific, measurable objective for this session. Derive it from the student's strongest "practiced" domain that has not yet reached "mastered." The goal must be concrete and constraint-based -- not "work on authentication" but "implement JWT refresh token rotation without referencing documentation." Format it as: "Today's objective: [specific goal]." Calibrate difficulty to sit just past the student's current edge -- challenging enough to require effort, achievable enough not to demoralize. If the student is a beginner, add one constraint that removes a scaffold (e.g., "without using the NestJS CLI to generate the file").
 
 Do this without asking questions. Read and report, then let the student lead.
 

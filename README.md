@@ -34,7 +34,7 @@ claude plugin marketplace add jreynolds-dev/sensei-framework
 claude plugin install sensei-framework
 ```
 
-Then in your project, run `/setup` -- it walks you through character selection and creates your `CLAUDE.md` and `ROADMAP.md`. `PROGRESS.md` is created automatically on first `/dojo-open`.
+Then in your project, run `/setup` -- Splinter introduces himself, asks four guided questions, and generates a populated `ROADMAP.md` and `CLAUDE.md` tailored to your project. A `.sensei/` folder is created with a `COMMANDS.md` quick-reference for your chosen character. `.sensei/PROGRESS.md` is created automatically on first `/dojo-open`.
 
 ### Option B: Manual Assembly
 
@@ -50,18 +50,21 @@ Then in your project, run `/setup` -- it walks you through character selection a
 
 | Command | What It Does |
 |---------|-------------|
-| `/setup` | Initialize sensei-framework in the current project |
-| `/dojo-open` | Open a session with briefing and skill pulse |
-| `/pizza-time` | Close the session, update all tracking files |
+| `/setup` | Initialize the dojo: onboarding flow for new projects, character selection, generates `.sensei/COMMANDS.md` |
+| `/dojo-open` | Open a session: recap, skill pulse, plateau check, and today's micro-goal |
+| `/pizza-time` | Close the session, update all tracking files and cheat sheet |
 | `/notecards` | Spaced repetition quiz (5 questions) |
 | `/show-me <topic>` | Annotated code demo with follow-up question |
 | `/why <concept>` | Deep-dive into why a pattern exists |
 | `/challenge-me [topic]` | Project-relevant exercise with acceptance criteria |
-| `/progress-report` | Visual mastery summary and recommendations |
+| `/spar [topic]` | Deliberate practice loop: blind attempt → reference reveal → gap analysis |
+| `/progress-report` | Visual mastery summary, plateau detection, and recommendations |
 
 The safeword (e.g., "hamato" for Splinter) is typed directly -- no slash command needed. It drops all teaching and gives a direct answer.
 
 Character-flavored trigger phrases also work (e.g., "dojo open" instead of `/dojo-open`).
+
+Once set up, check `.sensei/COMMANDS.md` in your project for a quick-reference card with your character's specific trigger phrases.
 
 ## Available Characters
 
@@ -76,7 +79,7 @@ Copy `characters/CHARACTER-TEMPLATE.md` and fill in the sections. The template g
 
 ## Adaptive Difficulty
 
-The framework silently reads your `PROGRESS.md` Skill Domains table and adjusts its behavior:
+The framework silently reads your `.sensei/PROGRESS.md` Skill Domains table and adjusts its behavior:
 
 - **Beginner** (mostly "not started"/"introduced"): More analogies, smaller steps, always explains why
 - **Intermediate** (mostly "practiced"): Expects you to try first, gives pointers not paths
@@ -86,7 +89,15 @@ This is per-domain -- being advanced at CRUD does not mean advanced at auth.
 
 ## Progress Tracking
 
-`PROGRESS.md` uses a structured format:
+All learning files live in `.sensei/` to keep your project root clean:
+
+| File | Created By | Purpose |
+|------|-----------|---------|
+| `.sensei/PROGRESS.md` | `/dojo-open` | Skill domains, concept index, session log |
+| `.sensei/CHEATSHEET.md` | `/pizza-time` | One-line summaries of every concept you've learned |
+| `.sensei/COMMANDS.md` | `/setup` | Quick-reference for your character's trigger phrases |
+
+`.sensei/PROGRESS.md` uses a structured format:
 
 - **Skill Domains table** -- high-level mastery per topic area
 - **Concept Index** -- granular tracking of every concept with mastery level, quiz history
@@ -114,14 +125,14 @@ sensei-framework/
 │   ├── show-me.md               # Annotated code demo
 │   ├── why.md                   # Deep-dive reasoning
 │   ├── challenge-me.md          # Project-relevant exercise
-│   └── progress-report.md       # Visual mastery summary
+│   ├── spar.md                  # Deliberate practice loop
+│   └── progress-report.md       # Visual mastery summary with plateau detection
 ├── characters/
 │   ├── splinter.md              # Master Splinter voice pack
 │   ├── gandalf.md               # Gandalf voice pack
 │   └── CHARACTER-TEMPLATE.md    # Blank template for custom characters
 ├── templates/
 │   ├── CLAUDE.md.template       # Slim project-level config
-│   ├── PROGRESS.md              # Structured progress template
 │   └── ROADMAP.md               # Standard roadmap template
 ├── framework/
 │   ├── FRAMEWORK.md             # Core teaching engine

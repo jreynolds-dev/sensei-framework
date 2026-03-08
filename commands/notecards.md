@@ -4,7 +4,7 @@ description: Quiz the student using spaced repetition from the Concept Index
 allowed-tools: Read, Edit
 ---
 
-Read `PROGRESS.md`, specifically the Concept Index table.
+Read `.sensei/PROGRESS.md`, specifically the Concept Index table.
 
 Select 5 concepts using spaced repetition weighting:
 - **introduced** concepts: 3x selection weight

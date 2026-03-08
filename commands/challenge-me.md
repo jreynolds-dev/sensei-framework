@@ -5,7 +5,7 @@ allowed-tools: Read, Glob
 argument: topic (optional)
 ---
 
-Read `PROGRESS.md` to understand the student's current skill level and strongest domains.
+Read `.sensei/PROGRESS.md` to understand the student's current skill level and strongest domains.
 
 Generate a concrete, project-relevant exercise:
 

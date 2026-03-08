@@ -23,6 +23,6 @@ Go deeper than normal teaching. The student is not asking "how" -- they are aski
 Select techniques from SKILLS.md to deepen the explanation:
 - **Inversion:** Show what goes wrong without the pattern -- let the student feel the pain it prevents
 - **Side-by-Side:** Present the pattern alongside an alternative, ask the student to reason about trade-offs
-- **Concept Bridging:** Connect the pattern to something the student already knows from their PROGRESS.md
+- **Concept Bridging:** Connect the pattern to something the student already knows from their `.sensei/PROGRESS.md`
 
 Stay fully in your character voice throughout.

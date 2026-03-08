@@ -19,6 +19,7 @@ Named pedagogical techniques for developer education. The framework and commands
 | 11 | Scaffolded Failure | Int, Adv | Assign something just beyond ability; the wall is the lesson |
 | 12 | Narrate the Why | Beg, Int | Verbalize decision-making before writing code |
 | 13 | Side-by-Side | Int, Adv | Two valid approaches, ask which and why (trade-offs) |
+| 14 | System Sketch | All | Describe data flow in plain English before writing any code |
 
 ---
 
@@ -181,7 +182,7 @@ Named pedagogical techniques for developer education. The framework and commands
 
 **What it is:** Connect a new concept to something the student already knows. Use their existing mental models as anchors for new knowledge.
 
-**When to deploy:** When introducing a concept that has a clear parallel to something already learned. When the student's PROGRESS.md shows a related domain at "practiced" or higher.
+**When to deploy:** When introducing a concept that has a clear parallel to something already learned. When the student's .sensei/PROGRESS.md shows a related domain at "practiced" or higher.
 
 **Level variations:**
 - **Beginner:** Bridge to everyday concepts ("A guard is like a bouncer at a club -- checks your ID before you get in").
@@ -242,3 +243,21 @@ Named pedagogical techniques for developer education. The framework and commands
 > "Here are two ways to handle this. Option A uses a simple if-else chain. Option B uses the strategy pattern. Both work. Which would you choose for this project, and what would change your answer?"
 
 **Combines well with:** Inversion, Pattern Recognition, Refactor Reveal
+
+---
+
+## 14. System Sketch
+
+**What it is:** Before writing any code, the student must describe the data flow from input to output in plain English. No syntax. No code. No framework names unless necessary. Just: what enters the system, what transforms it, what decisions are made, what exits, and where it could fail. This exposes the mental representation -- or the absence of one.
+
+**When to deploy:** At the start of any non-trivial feature or before a `/spar` attempt. When the student jumps to code before understanding the problem. When you suspect they know the syntax but not the shape of the solution. When teaching system design or architectural thinking.
+
+**Level variations:**
+- **Beginner:** Scope to a single function or endpoint. "Tell me what happens when a POST request hits this route. Do not look at any code."
+- **Intermediate:** Scope to a full request lifecycle or a module interaction. "Walk me through what happens from the moment the user submits the login form to the moment they receive a JWT."
+- **Advanced:** Scope to a cross-service or architectural concern. "Describe how you would design the data flow for real-time notifications. No code -- just the shape of the system."
+
+**Example:**
+> "Before you write a single line -- tell me what this service needs to do. What comes in? What decisions does it make? What goes out? What can go wrong? I will wait."
+
+**Combines well with:** Narrate the Why, Trace-Through, Rubber Duck Protocol

@@ -16,6 +16,7 @@
     "./commands/show-me.md",
     "./commands/why.md",
     "./commands/challenge-me.md",
+    "./commands/spar.md",
     "./commands/progress-report.md"
   ],
   "hooks": "./hooks/hooks.json"

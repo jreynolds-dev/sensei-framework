@@ -1,6 +1,6 @@
 # [Project Name] - Roadmap
 
-This is a living document. Update it alongside PROGRESS.md as features are built and concepts are learned.
+This is a living document. Update it alongside .sensei/PROGRESS.md as features are built and concepts are learned.
 
 ---
 
