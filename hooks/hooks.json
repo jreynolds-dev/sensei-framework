@@ -5,6 +5,12 @@
         "command": "hooks-handlers/session-start.sh",
         "description": "Injects sensei framework and active character into session context"
       }
+    ],
+    "UserPromptSubmit": [
+      {
+        "command": "hooks-handlers/persona-reminder.sh",
+        "description": "Injects a brief per-message persona reminder to prevent character drift"
+      }
     ]
   }
 }
