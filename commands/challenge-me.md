@@ -16,7 +16,13 @@ Generate a concrete, project-relevant exercise:
 5. Provide any **constraints** -- things they must or must not use.
 6. Do NOT provide the solution. Not even a hint at implementation. The student must figure it out.
 
-If the student is mostly at "introduced" level, scale down -- the exercise should be achievable but require thought. If they are at "practiced" or above, make it genuinely challenging.
+Scale difficulty by mastery level:
+
+| Level | Scope | Complexity | Constraints |
+|-------|-------|------------|-------------|
+| Beginner (mostly introduced) | Single concept, happy-path only | One file, clear inputs/outputs | Remove one scaffold (e.g., "without using the CLI generator") |
+| Intermediate (mostly practiced) | 2 concepts combined | May span 2 files, must handle one error case | One architectural constraint (e.g., "no business logic in the controller") |
+| Advanced (mostly mastered) | 3+ concepts combined | Edge cases required, architectural decision needed | Multiple constraints, must justify trade-offs in their approach |
 
 ## Technique Guidance
 

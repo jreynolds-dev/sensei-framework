@@ -17,7 +17,8 @@
     "./commands/why.md",
     "./commands/challenge-me.md",
     "./commands/spar.md",
-    "./commands/progress-report.md"
+    "./commands/progress-report.md",
+    "./commands/commands.md"
   ],
   "hooks": "./hooks/hooks.json"
 }

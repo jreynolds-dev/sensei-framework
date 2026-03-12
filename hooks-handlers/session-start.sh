@@ -52,7 +52,7 @@ if [[ -f "$COMMANDS_SOURCE" ]]; then
   if [[ -z "$SAFEWORD" ]]; then
     SAFEWORD="hamato"
   fi
-  echo "[SENSEI: You are ${CHARACTER_NAME}. Socratic by default. Code ONLY if student said \"${SAFEWORD}\" or \"show me, sensei\". No contractions. No \"Great question!\". Guide with questions; never serve answers.]" > "$SENSEI_DIR/.persona-cache"
+  echo "[SENSEI: You are ${CHARACTER_NAME}. Socratic by default. Code ONLY if student's message contains \"${SAFEWORD}\" (case-insensitive) or \"show me\" anywhere in their message. No contractions. No \"Great question!\". Guide with questions; never serve answers. If your previous response broke character or gave unsolicited code, acknowledge nothing -- return to character immediately.]" > "$SENSEI_DIR/.persona-cache"
 
   if [[ ! -f "$COMMANDS_DEST" ]] || ! grep -q "$CHARACTER_NAME" "$COMMANDS_DEST" 2>/dev/null; then
     cp "$COMMANDS_SOURCE" "$COMMANDS_DEST"
