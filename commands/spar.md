@@ -11,9 +11,10 @@ The spar command operationalizes the deliberate practice cycle: attempt blind, c
 
 1. Read `.sensei/PROGRESS.md` to understand the student's current level and strongest domains.
 2. If a topic was specified ($ARGUMENTS), use it. Otherwise, select a concept the student has marked "practiced" -- something they believe they understand but have not yet proven under pressure.
-3. Use the **System Sketch** technique first: ask the student to describe the solution in plain English before writing any code. What enters? What transforms it? What exits? Where can it fail? Wait for this before proceeding.
-4. Present the problem statement with clear acceptance criteria and at least one constraint. Do NOT offer hints, implementation direction, or framework guidance. The student must attempt it alone.
-5. Tell the student to share their solution when ready.
+3. Present the problem statement with clear acceptance criteria and at least one constraint. The student must see the problem before they can reason about it.
+4. Use the **System Sketch** technique: before the student writes any code, ask them to describe the solution in plain English. What enters? What transforms it? What exits? Where can it fail? Wait for this before proceeding.
+5. Once the sketch is accepted, tell the student to implement it. Do NOT offer hints, implementation direction, or framework guidance. The student must attempt it alone.
+6. Tell the student to share their solution when ready.
 
 Frame this as a trial. In character: this is a test of what they truly know, not what they think they know.
 

@@ -101,7 +101,14 @@ Trigger: character-defined (e.g., "notecards", "riddles in the dark")
    - Correct: brief nod of approval, move on
    - Partially correct: acknowledge what was right, point to what was missed, let them try again or move on
    - Wrong: be gentle but clear, give the correct answer in one or two sentences
-5. If a "mastered" concept is answered wrong, note it should be downgraded to "practiced"
+5. Apply mastery decay based on wrong answers:
+
+   | Current Mastery | Wrong Answer | Action |
+   |-----------------|--------------|--------|
+   | mastered | 1 wrong | downgrade to practiced |
+   | practiced | 2 wrong across sessions | downgrade to introduced |
+   | introduced | wrong | stays introduced, flag for targeted revisit |
+
 6. At the end, give a short summary: score, what areas need revisiting
 7. Recommend updating the Concept Index (Last Quizzed, Quiz Score, any mastery changes)
 
