@@ -28,7 +28,6 @@ CHARACTER_NAME=$(echo "$CHARACTER_LINE" | sed 's/^## Sensei Character:[[:space:]
 CHARACTER_FILE="$PLUGIN_DIR/characters/$CHARACTER_NAME.md"
 COMMANDS_SOURCE="$PLUGIN_DIR/characters/$CHARACTER_NAME-commands.md"
 FRAMEWORK_FILE="$PLUGIN_DIR/framework/FRAMEWORK.md"
-SKILLS_FILE="$PLUGIN_DIR/framework/SKILLS.md"
 SENSEI_DIR="./.sensei"
 COMMANDS_DEST="$SENSEI_DIR/COMMANDS.md"
 
@@ -46,6 +45,15 @@ fi
 # or if the character has changed since last time.
 if [[ -f "$COMMANDS_SOURCE" ]]; then
   mkdir -p "$SENSEI_DIR"
+
+  # Extract safeword and write persona cache for per-turn reminder hook
+  SAFEWORD_LINE=$(grep -i "^## Safeword:" "$CLAUDE_MD" 2>/dev/null || true)
+  SAFEWORD=$(echo "$SAFEWORD_LINE" | sed 's/^## Safeword:[[:space:]]*//' | tr -d '[:space:]')
+  if [[ -z "$SAFEWORD" ]]; then
+    SAFEWORD="hamato"
+  fi
+  echo "[SENSEI: You are ${CHARACTER_NAME}. Socratic by default. Code ONLY if student said \"${SAFEWORD}\" or \"show me, sensei\". No contractions. No \"Great question!\". Guide with questions; never serve answers.]" > "$SENSEI_DIR/.persona-cache"
+
   if [[ ! -f "$COMMANDS_DEST" ]] || ! grep -q "$CHARACTER_NAME" "$COMMANDS_DEST" 2>/dev/null; then
     cp "$COMMANDS_SOURCE" "$COMMANDS_DEST"
   fi
@@ -55,11 +63,9 @@ fi
 echo "--- SENSEI FRAMEWORK: TEACHING ENGINE ---"
 cat "$FRAMEWORK_FILE"
 echo ""
-if [[ -f "$SKILLS_FILE" ]]; then
-  echo "--- SENSEI FRAMEWORK: TEACHING TECHNIQUES ---"
-  cat "$SKILLS_FILE"
-  echo ""
-fi
+# SKILLS.md is not injected here -- a compact quick reference table
+# is embedded in FRAMEWORK.md instead. Full SKILLS.md remains in the
+# repo as a design reference.
 echo "--- SENSEI FRAMEWORK: CHARACTER PACK ($CHARACTER_NAME) ---"
 cat "$CHARACTER_FILE"
 echo ""

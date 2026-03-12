@@ -152,6 +152,8 @@ Read the chosen character file. Find the Command Names table and extract the tri
 
 If the character was not yet written into CLAUDE.md (i.e., setup was run on an existing project), update the `## Sensei Character:` and `## Safeword:` lines now.
 
+Write `.sensei/.persona-cache` with the new character name and safeword.
+
 If onboarding was completed in steps 2--4, the character and safeword are already in CLAUDE.md -- confirm they are correct and update if the student chose a different character.
 
 ## 10. Summary
