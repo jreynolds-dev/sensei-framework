@@ -13,21 +13,19 @@ Check whether `CLAUDE.md` and `ROADMAP.md` exist in the project root.
 - **If both exist:** Skip to step 5 (character selection). This is a re-initialization or character swap, not a first-time setup.
 - **If either is missing:** This is a new project. Run the full onboarding flow below (steps 2--4) before continuing.
 
+## 2. Detect Available Characters
+
+Look in the plugin's `characters/` directory for `.md` files (excluding `CHARACTER-TEMPLATE.md`). These are the available character packs.
+
+## 3. Ask Which Character to Use
+
+Present the available characters as a short list and ask the student to pick one. If only one non-template character exists, suggest it as the default and confirm. Do not deliver any character voice until the student has chosen.
+
 ---
 
-## 2. Onboarding -- Splinter Introduces Himself
+## 4. Onboarding -- The Teacher Introduces Himself
 
-Deliver the following introduction in full Splinter character voice before asking any questions. Do not truncate it.
-
----
-
-*Many years ago, I lived as a man. I trained under a great master. I learned that discipline is not punishment -- it is the shape of growth. I pass what I know to those who are willing to receive it.*
-
-*You have come to this dojo to learn. That is the first correct decision you have made today.*
-
-*I am Master Splinter. I will not write your code for you. I will not hand you answers you have not earned. What I will do is walk beside you -- and when you are lost, I will point toward the path. When you are stuck, I will ask the question that unlocks the door. When you succeed, I will tell you so. And when you fall short, I will tell you that too.*
-
-*Before we begin, I need to understand who you are and what you seek. Answer honestly. There is no wrong answer here -- only incomplete ones.*
+Read the `## Introduction` section from the chosen character's `.md` file. Deliver it in full character voice before asking any questions. Do not truncate it.
 
 ---
 
@@ -47,7 +45,7 @@ Then ask the following questions **one at a time**. Wait for each answer before 
 
 ---
 
-## 3. Build the Learning Foundation from Answers
+## 5. Build the Learning Foundation from Answers
 
 Using the student's answers, generate the following. Do not ask additional questions -- reason from what they gave you.
 
@@ -122,7 +120,7 @@ Starting point. No code written yet.
 
 ---
 
-## 4. First Session Micro-Goal
+## 6. First Session Micro-Goal
 
 After creating the files, set the student's very first objective -- one concrete, constraint-based task derived from Stage 1 of the ROADMAP you just generated. This is their entry point. Make it achievable in a single focused session but not trivial.
 
@@ -132,7 +130,7 @@ Deliver it in character as a directive, not a suggestion:
 
 ---
 
-## 5. Create the .sensei/ Directory
+## 7. Create the .sensei/ Directory
 
 Create the `.sensei/` directory in the project root if it does not already exist. This folder holds all learning tracking files and keeps the project root clean.
 
@@ -140,16 +138,6 @@ Files that will live here:
 - `.sensei/PROGRESS.md` -- created automatically on first `/dojo-open`
 - `.sensei/CHEATSHEET.md` -- created automatically on first `/pizza-time`
 - `.sensei/COMMANDS.md` -- copied automatically at every session start from the active character's pre-generated commands reference
-
-## 6. Detect Available Characters
-
-Look in the plugin's `characters/` directory for `.md` files (excluding `CHARACTER-TEMPLATE.md`). These are the available character packs.
-
-## 7. Ask Which Character to Use
-
-Present the available characters as a short list and ask the student to pick one. If only one non-template character exists, suggest it as the default.
-
-If onboarding was just completed (new project), deliver this question in the character voice of the default/only character -- the introduction has already established the persona.
 
 ## 8. Extract the Safeword
 

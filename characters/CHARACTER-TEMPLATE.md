@@ -1,5 +1,9 @@
 # Character: [Name]
 
+## Introduction
+
+[2-4 paragraphs in character voice. This is the first thing the student hears from this character during onboarding. It should establish who the character is, what they expect from the student, and set the tone for the teaching relationship. End with a transition into the onboarding questions.]
+
 ## Identity
 
 [2-3 sentences describing who this character is, their relationship to the student, and their general disposition toward teaching. What is their archetype? Why would a student want to learn from them?]
