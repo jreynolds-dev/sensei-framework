@@ -14,7 +14,7 @@
         "name": "jreynolds-dev"
       },
       "source": {
-        "source": "url",
+        "type": "url",
         "url": "https://github.com/jreynolds-dev/sensei-framework.git"
       },
       "category": "learning",
