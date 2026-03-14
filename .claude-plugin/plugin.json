@@ -21,5 +21,8 @@
     "./commands/commands.md",
     "./commands/sensei-check.md"
   ],
-  "hooks": "./hooks/hooks.json"
+  "hooks": "./hooks/hooks.json",
+  "engines": {
+    "claude-code": ">=2.1.0"
+  }
 }
