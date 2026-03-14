@@ -1,5 +1,11 @@
 # [Project Name] - Progress Log
 
+## Session Config
+
+- **Character:** [character_name]
+- **Learning Mode:** balanced
+- **Safeword:** [safeword]
+
 ## Skill Domains
 
 | Domain | Level | Last Practiced | Sessions Active |

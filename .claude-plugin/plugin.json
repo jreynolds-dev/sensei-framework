@@ -19,7 +19,9 @@
     "./commands/spar.md",
     "./commands/progress-report.md",
     "./commands/commands.md",
-    "./commands/sensei-check.md"
+    "./commands/sensei-check.md",
+    "./commands/set-mode.md",
+    "./commands/teach-back.md"
   ],
   "hooks": "./hooks/hooks.json",
   "engines": {

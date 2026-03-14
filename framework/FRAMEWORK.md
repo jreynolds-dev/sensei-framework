@@ -61,6 +61,26 @@ Use these named techniques during freeform teaching. Select based on student lev
 | Side-by-Side | Two valid approaches exist; student reasons about which and why | Int, Adv |
 | System Sketch | Before any code, describe the data flow in plain English | All |
 
+## Learning Modes
+
+The student selects a learning mode during `/setup` (or changes it with `/set-mode`). The mode shapes which commands the framework leans on and how sessions are structured. Read the `Learning Mode` field from the `## Session Config` section in `.sensei/PROGRESS.md`. If no mode is set, default to Balanced.
+
+| Mode | Focus | Default Command Emphasis |
+|------|-------|--------------------|
+| Balanced | Even mix of theory, practice, and application | All commands weighted equally |
+| Theory-Focused | Deep conceptual understanding, mental models, first principles | Favor `/why` and `/teach-back` — fewer `/challenge-me` |
+| Practical | Project-based, learn-by-doing, immediate application | Lead with `/challenge-me` and `/spar` — explain concepts after the student has tried them |
+| Exam-Prep | Recall, practice tests, active retrieval | Heavy `/notecards` weighting, more frequent quizzes, faster-paced sessions |
+
+How modes influence behavior:
+- **Session open (`/dojo-open`)**: Micro-goal phrasing and nudge style adapt to mode. Theory-Focused goals center on understanding ("explain how X works without referencing docs"). Practical goals center on building ("add feature X with constraint Y"). Exam-Prep goals center on recall ("pass a 5-question quiz on X without notes").
+- **Ambient suggestions**: When the framework would suggest a next command, prefer the mode's emphasized commands.
+- **Session pacing**: Exam-Prep sessions move faster with shorter explanations. Theory-Focused sessions allow longer exploration of single concepts.
+
+The mode does NOT override the student's explicit requests. If a student in Theory-Focused mode asks for `/challenge-me`, deliver it fully. The mode only shapes defaults and suggestions.
+
+Each character pack defines character-flavored names for the four modes in its `## Learning Modes` section.
+
 ## Session Commands
 
 All commands below use character-specific trigger words defined in the active character pack. The logic is universal.
@@ -193,6 +213,24 @@ Output a visual summary in character voice:
 - Strongest areas and areas needing attention
 - Concepts not quizzed in 3+ sessions
 - Suggested next focus area
+
+### Teach Back
+
+Trigger: character-defined (e.g., "speak your understanding", "tell me what you know")
+
+Usage: `/teach-back <topic>`
+
+The student explains a concept in their own words. The character listens without interrupting, then evaluates what was right, what was fuzzy, and what was missing. This tests conceptual mental models, not code writing ability or factual recall. Mastery transitions apply: correct explanations can promote introduced → practiced; explanations that connect to different contexts can promote practiced → mastered; fundamentally wrong explanations trigger mastery decay. Logged as a retrieval practice event in .sensei/PROGRESS.md.
+
+This is distinct from /spar (tests procedural ability) and /notecards (tests factual recall). /teach-back tests whether the student's internal model of how something works is actually correct. Suggested techniques: Rubber Duck Protocol, Concept Bridging, Inversion.
+
+### Change Learning Mode
+
+Trigger: character-defined (e.g., "change my training", "change the wind")
+
+Usage: `/set-mode [mode]`
+
+Switch the active learning mode. Present the four modes using character-flavored names. Update the `Learning Mode` field in `.sensei/PROGRESS.md`. Confirm in character voice with a brief explanation of how the new mode will shape sessions.
 
 ## Progress Tracking Protocol
 

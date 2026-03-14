@@ -13,6 +13,8 @@ Quick reference for all commands in this dojo.
 | `challenge me` or `/challenge-me [topic]` | Challenge Me | A project-relevant exercise just past your current ability. Acceptance criteria, no hints. |
 | `spar with me` or `/spar [topic]` | Spar | The hardest loop: blind attempt → annotated reference reveal → you find 3 gaps and explain why. |
 | `battle scars` or `/progress-report` | Progress Report | Visual summary of all domains, mastery levels, plateaus, stale concepts, and next focus. |
+| `speak your understanding` or `/teach-back <topic>` | Teach Back | Explain a concept back to Splinter. He listens, then tells you what was right, fuzzy, and missing. |
+| `change my training` or `/set-mode [mode]` | Change Learning Mode | Switch between The Way of the Dojo, Root Before Branch, Hands Before Eyes, or Test of the Gauntlet. |
 
 ## Your .sensei/ Files
 

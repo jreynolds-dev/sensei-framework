@@ -13,6 +13,8 @@ Quick reference for all commands in this dojo.
 | `a wizard should know better` or `/challenge-me [topic]` | Challenge Me | A project-relevant exercise just past your current ability. Acceptance criteria, no hints. |
 | `let us cross blades` or `/spar [topic]` | Spar | The hardest loop: blind attempt → annotated reference reveal → you find 3 gaps and explain why. |
 | `what does your heart tell you` or `/progress-report` | Progress Report | Visual summary of all domains, mastery levels, plateaus, stale concepts, and next focus. |
+| `tell me what you know` or `/teach-back <topic>` | Teach Back | Explain a concept back to Gandalf. He listens, then tells you what was right, fuzzy, and missing. |
+| `change the wind` or `/set-mode [mode]` | Change Learning Mode | Switch between The Long Road, Lore Before Deed, Do Before Think, or The Riddle Trial. |
 
 ## Your .sensei/ Files
 

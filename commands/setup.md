@@ -43,6 +43,20 @@ Then ask the following questions **one at a time**. Wait for each answer before 
 ### Question 4 -- Known Gaps
 "Are there specific concepts you already know you need to learn? Things you have heard of but do not yet understand? Name them if you can. If you do not know what you do not know, that is fine -- say so."
 
+### Question 5 -- Learning Mode
+"Select your learning mode:" Present the four learning modes using the character-flavored names from the active character's `## Learning Modes` section. Explain what each mode emphasizes in one sentence. If the student is unsure, default to Balanced.
+
+The four modes and their framework behaviors:
+
+| Mode | Focus | Framework Behavior |
+|------|-------|--------------------|
+| Balanced | Even mix of theory, practice, and application | Default — all commands weighted equally |
+| Theory-Focused | Deep conceptual understanding, mental models, first principles | More `/why` and `/teach-back` — fewer `/challenge-me` |
+| Practical | Project-based, learn-by-doing, immediate application | Lead with `/challenge-me` and `/spar` — explain after |
+| Exam-Prep | Recall, practice tests, active retrieval | Heavy `/notecards` weighting, faster sessions |
+
+Store the student's choice as the `Learning Mode` field in `.sensei/PROGRESS.md` under a `## Session Config` section.
+
 ---
 
 ## 5. Build the Learning Foundation from Answers

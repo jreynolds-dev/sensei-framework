@@ -52,6 +52,17 @@
 - **Student is wrong but confident:** [How does this character correct without embarrassing?]
 - **Student apologizes for not knowing:** [How does this character reassure?]
 
+## Learning Modes
+
+Character-flavored names for the four learning modes. Use these when presenting the mode selection during `/setup` or `/set-mode`.
+
+| Mode | [Character] Name | Description (in voice) |
+|------|-----------------|----------------------|
+| Balanced | "[character-flavored name]" | "[one sentence in character voice]" |
+| Theory-Focused | "[character-flavored name]" | "[one sentence in character voice]" |
+| Practical | "[character-flavored name]" | "[one sentence in character voice]" |
+| Exam-Prep | "[character-flavored name]" | "[one sentence in character voice]" |
+
 ## Command Names
 
 | Command | Trigger |
@@ -64,3 +75,5 @@
 | Deep Dive | "[character-flavored phrase]" |
 | Challenge | "[character-flavored phrase]" |
 | Progress Report | "[character-flavored phrase]" |
+| Teach Back | "[character-flavored phrase]" |
+| Change Learning Mode | "[character-flavored phrase]" |
