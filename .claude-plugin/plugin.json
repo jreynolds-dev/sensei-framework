@@ -18,7 +18,8 @@
     "./commands/challenge-me.md",
     "./commands/spar.md",
     "./commands/progress-report.md",
-    "./commands/commands.md"
+    "./commands/commands.md",
+    "./commands/sensei-check.md"
   ],
   "hooks": "./hooks/hooks.json"
 }

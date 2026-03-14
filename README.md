@@ -59,6 +59,8 @@ Then in your project, run `/setup` -- Splinter introduces himself, asks four gui
 | `/challenge-me [topic]` | Project-relevant exercise with acceptance criteria |
 | `/spar [topic]` | Deliberate practice loop: blind attempt → reference reveal → gap analysis |
 | `/progress-report` | Visual mastery summary, plateau detection, and recommendations |
+| `/sensei-check` | Validate setup: confirms CLAUDE.md, character, safeword, ROADMAP.md, and PROGRESS.md are present |
+| `/commands` | Show all available commands and trigger phrases in your character's voice |
 
 The safeword (e.g., "hamato" for Splinter) is typed directly -- no slash command needed. It drops all teaching and gives a direct answer.
 
@@ -86,6 +88,8 @@ The framework silently reads your `.sensei/PROGRESS.md` Skill Domains table and 
 - **Advanced** (mostly "mastered"): Challenges assumptions, introduces trade-offs, minimal hand-holding
 
 This is per-domain -- being advanced at CRUD does not mean advanced at auth.
+
+**How it works:** At session open, `PROGRESS.md` is included in Claude's context window. The framework instructs Claude to read the Skill Domains table and calibrate its responses accordingly. Adaptation is reliable for typical progress files but may degrade in very long sessions where context window pressure is high. If you notice responses feeling miscalibrated, running `/dojo-open` reloads the context.
 
 ## Progress Tracking
 
@@ -116,7 +120,7 @@ sensei-framework/
 ├── hooks/
 │   └── hooks.json               # SessionStart hook config
 ├── hooks-handlers/
-│   └── session-start.sh         # Injects framework + character into context
+│   └── README.md                # Documents the original shell hooks and why they were replaced
 ├── commands/
 │   ├── setup.md                 # Project initialization
 │   ├── dojo-open.md             # Session open with skill pulse
@@ -126,10 +130,14 @@ sensei-framework/
 │   ├── why.md                   # Deep-dive reasoning
 │   ├── challenge-me.md          # Project-relevant exercise
 │   ├── spar.md                  # Deliberate practice loop
-│   └── progress-report.md       # Visual mastery summary with plateau detection
+│   ├── progress-report.md       # Visual mastery summary with plateau detection
+│   ├── commands.md              # Show available commands in character voice
+│   └── sensei-check.md          # Setup validation
 ├── characters/
 │   ├── splinter.md              # Master Splinter voice pack
+│   ├── splinter-commands.md     # Splinter command reference card (copied to .sensei/ on setup)
 │   ├── gandalf.md               # Gandalf voice pack
+│   ├── gandalf-commands.md      # Gandalf command reference card (copied to .sensei/ on setup)
 │   └── CHARACTER-TEMPLATE.md    # Blank template for custom characters
 ├── templates/
 │   ├── CLAUDE.md.template       # Slim project-level config
@@ -137,6 +145,10 @@ sensei-framework/
 ├── framework/
 │   ├── FRAMEWORK.md             # Core teaching engine
 │   └── SKILLS.md                # Named teaching techniques catalog
+├── examples/
+│   ├── PROGRESS.md              # Sample completed progress file
+│   ├── CHEATSHEET.md            # Sample concept cheat sheet
+│   └── session-transcript.md    # Sample /dojo-open output for setup verification
 ├── README.md
 └── LICENSE
 ```
