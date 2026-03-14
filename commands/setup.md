@@ -1,7 +1,7 @@
 ---
 name: setup
 description: Initialize sensei-framework in the current project
-allowed-tools: Read, Write, Glob, Grep, Bash
+allowed-tools: Read, Write, Glob, Grep
 ---
 
 Set up sensei-framework in the current project.
@@ -130,14 +130,16 @@ Deliver it in character as a directive, not a suggestion:
 
 ---
 
-## 7. Create the .sensei/ Directory
+## 7. Create the .sensei/ Directory and Copy Commands Reference
 
 Create the `.sensei/` directory in the project root if it does not already exist. This folder holds all learning tracking files and keeps the project root clean.
 
+Copy the chosen character's pre-generated commands reference file (e.g., `characters/splinter-commands.md`) to `.sensei/COMMANDS.md`. This gives the student a quick-reference card for their character's trigger phrases. Overwrite if it already exists (character may have changed).
+
 Files that will live here:
+- `.sensei/COMMANDS.md` -- copied from the character pack by `/setup`
 - `.sensei/PROGRESS.md` -- created automatically on first `/dojo-open`
 - `.sensei/CHEATSHEET.md` -- created automatically on first `/pizza-time`
-- `.sensei/COMMANDS.md` -- copied automatically at every session start from the active character's pre-generated commands reference
 
 ## 8. Extract the Safeword
 
@@ -146,8 +148,6 @@ Read the chosen character file. Find the Command Names table and extract the tri
 ## 9. Finalize CLAUDE.md
 
 If the character was not yet written into CLAUDE.md (i.e., setup was run on an existing project), update the `## Sensei Character:` and `## Safeword:` lines now.
-
-Write `.sensei/.persona-cache` with the new character name and safeword.
 
 If onboarding was completed in steps 2--4, the character and safeword are already in CLAUDE.md -- confirm they are correct and update if the student chose a different character.
 

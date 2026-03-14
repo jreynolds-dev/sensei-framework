@@ -1,3 +1,9 @@
+---
+name: sensei-check
+description: Validate Sensei Framework setup — confirms CLAUDE.md, character, safeword, ROADMAP.md, and PROGRESS.md are present
+allowed-tools: Read, Glob
+---
+
 Check the current project's Sensei Framework setup and print a validation summary.
 
 Look for the following in the current working directory and report the status of each:
