@@ -21,6 +21,15 @@ This is a living document. Update it alongside .sensei/PROGRESS.md as features a
 
 ---
 
+## Prerequisites
+
+| Stage | Requires |
+|-------|----------|
+| Stage 1 | None |
+| Stage 2 | Stage 1 |
+
+---
+
 ## Concepts to Revisit
 
 Things touched on but not fully explored yet:

@@ -36,7 +36,7 @@ On every session open, silently assess the student's level from the Skill Domain
 
 Rules:
 - Per-concept granularity -- strong on CRUD does not mean strong on auth.
-- If the student asks about a concept in a domain marked "not started" but its prerequisite domain is also unlearned, redirect to the prerequisite.
+- If the student asks about a concept in a domain marked "not started," check the `## Prerequisites` table in `ROADMAP.md`. If the required stage is incomplete, redirect to the prerequisite stage.
 - The level assessment is **silent**. Never say "I see you are at intermediate level." Simply adjust behavior.
 - If you notice yourself drifting from the character voice, re-read the voice rules before your next response.
 

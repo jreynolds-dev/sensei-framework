@@ -73,6 +73,7 @@ Rules for stage generation:
 - Stage names should describe what the student will be able to DO at the end of that stage, not just what they will "learn."
 - The final stage should correspond to the success definition the student gave in Question 3.
 - Add a "Concepts to Revisit" section at the bottom populated with any gaps the student named in Question 4, plus any concepts implied by the stack that a learner at their level typically struggles with.
+- Add a `## Prerequisites` table mapping each stage to the stages it depends on. Stage 1 always requires "None." Derive dependencies from the natural learning order — a stage that uses concepts introduced in an earlier stage requires that stage. Keep it stage-level, not concept-level.
 
 Example stage structure for a NestJS beginner building a REST API:
 ```
