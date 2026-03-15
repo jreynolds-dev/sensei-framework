@@ -31,6 +31,7 @@ Mastery levels:
 
 ### Session 1
 **Date:** YYYY-MM-DD
+**Safeword Uses:** 0
 
 **Concepts Covered:**
 - [concept] -- [one-line description]

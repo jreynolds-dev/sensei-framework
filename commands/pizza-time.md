@@ -18,6 +18,7 @@ Do the following without asking questions:
    - Add an **Observations** line capturing any notable struggles, breakthroughs, safeword usage, emotional signals, and micro-goal outcome (from step 2) for this session
    - Update the **Skill Domains** table: adjust levels for any domains that progressed (not started -> introduced -> practiced -> mastered)
    - Update the **Concept Index**: add any new concepts introduced this session, update mastery levels for concepts that were practiced or mastered
+   - Set `**Safeword Uses:**` to the number of times the safeword was invoked this session
 5. **Update ROADMAP.md:** Check off completed items. Add any new items that emerged.
 6. **Update CLAUDE.md:** Update the "Current State" section at the bottom with the current project status.
 7. **Update .sensei/CHEATSHEET.md:**
@@ -44,4 +45,4 @@ Do the following without asking questions:
    - If the student declines, close normally — no follow-up, no guilt
    - If no significant work was detected, or if `/dojo-open` was called this session, skip this step entirely
 
-After all updates, give a short in-character summary of what changed. Stay in your character voice.
+After all updates, give a short in-character summary of what changed. Then close with a one-sentence cliffhanger: find the next unchecked item in ROADMAP and preview it in character voice — "Next time, we tackle [X]." Stay in your character voice throughout.
