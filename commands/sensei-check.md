@@ -1,10 +1,10 @@
 ---
 name: sensei-check
-description: Validate Sensei Framework setup — confirms CLAUDE.md, character, safeword, ROADMAP.md, and PROGRESS.md are present
+description: Validate Sensei setup — confirms CLAUDE.md, character, safeword, ROADMAP.md, and PROGRESS.md are present
 allowed-tools: Read, Glob
 ---
 
-Check the current project's Sensei Framework setup and print a validation summary.
+Check the current project's Sensei setup and print a validation summary.
 
 Look for the following in the current working directory and report the status of each:
 
@@ -12,12 +12,12 @@ Look for the following in the current working directory and report the status of
 2. **Safeword** — Does CLAUDE.md contain a `## Safeword:` line? What is the configured safeword?
 3. **ROADMAP.md** — Does it exist in the project root?
 4. **.sensei/PROGRESS.md** — Does it exist? If so, how many skill domains are tracked?
-5. **Framework content** — Does CLAUDE.md contain the Sensei Framework teaching rules (look for the presence of "SENSEI FRAMEWORK" or "Socratic" in the file)?
+5. **Framework content** — Does CLAUDE.md contain the Sensei teaching rules (look for the presence of "SENSEI" or "Socratic" in the file)?
 
 Print results in this format, substituting actual values:
 
 ```
-Sensei Framework — Setup Check
+Sensei — Setup Check
 ──────────────────────────────
 CLAUDE.md found:         ✓ / ✗
 Character selected:      ✓ splinter  /  ✗ not configured

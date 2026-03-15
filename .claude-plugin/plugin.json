@@ -1,11 +1,11 @@
 {
-  "name": "sensei-framework",
+  "name": "sensei",
   "version": "1.0.0",
-  "description": "A reusable, character-swappable teaching framework for Claude Code. Turn any project into a guided learning dojo with adaptive difficulty, spaced repetition, and rich session commands.",
+  "description": "A reusable, character-swappable teaching plugin for Claude Code. Turn any project into a guided learning dojo with adaptive difficulty, spaced repetition, and rich session commands.",
   "author": {
     "name": "jreynolds-dev"
   },
-  "repository": "https://github.com/jreynolds-dev/sensei-framework",
+  "repository": "https://github.com/jreynolds-dev/sensei",
   "license": "MIT",
   "keywords": ["teaching", "learning", "education", "mentor", "socratic", "adaptive"],
   "commands": [

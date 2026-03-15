@@ -1,10 +1,10 @@
 ---
 name: setup
-description: Initialize sensei-framework in the current project
+description: Initialize sensei in the current project
 allowed-tools: Read, Write, Glob, Grep
 ---
 
-Set up sensei-framework in the current project.
+Set up sensei in the current project.
 
 ## 1. Detect Context -- New Project vs. Existing
 
