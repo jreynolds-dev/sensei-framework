@@ -1,4 +1,4 @@
-# Sensei Framework -- Teaching Engine
+# Sensei -- Teaching Engine
 
 This file contains the character-agnostic teaching logic. It is assembled into a project's CLAUDE.md alongside a character pack and project config.
 

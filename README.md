@@ -1,10 +1,10 @@
-# Sensei Framework
+# Sensei
 
-A reusable, character-swappable teaching framework for [Claude Code](https://claude.ai/claude-code). Turn any project into a guided learning dojo with adaptive difficulty, spaced repetition quizzes, and rich session commands.
+A reusable, character-swappable teaching plugin for [Claude Code](https://claude.ai/claude-code). Turn any project into a guided learning dojo with adaptive difficulty, spaced repetition quizzes, and rich session commands.
 
 ## What It Does
 
-Sensei Framework transforms Claude Code into a patient, in-character mentor who:
+Sensei transforms Claude Code into a patient, in-character mentor who:
 
 - **Teaches through questions**, not answers (Socratic method by default)
 - **Adapts difficulty** based on your tracked progress -- beginner gets more analogies, advanced gets more challenges
@@ -28,10 +28,10 @@ Layer 3: Project Config    -- Your CLAUDE.md with project description, conventio
 
 ```bash
 # Add the marketplace (one-time)
-claude plugin marketplace add jreynolds-dev/sensei-framework
+claude plugin marketplace add jreynolds-dev/sensei
 
 # Install the plugin
-claude plugin install sensei-framework
+claude plugin install sensei
 ```
 
 Then in your project, run `/setup` -- Splinter introduces himself, asks four guided questions, and generates a populated `ROADMAP.md` and `CLAUDE.md` tailored to your project. A `.sensei/` folder is created with a `COMMANDS.md` quick-reference for your chosen character. `.sensei/PROGRESS.md` is created automatically on first `/dojo-open`.
@@ -114,7 +114,7 @@ The `/notecards` command uses spaced repetition: concepts at lower mastery and t
 ## File Structure
 
 ```
-sensei-framework/
+sensei/
 ├── .claude-plugin/
 │   └── plugin.json              # Plugin metadata
 ├── hooks/

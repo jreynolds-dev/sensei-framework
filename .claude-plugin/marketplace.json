@@ -1,24 +1,24 @@
 {
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
-  "name": "sensei-framework-marketplace",
-  "description": "Teaching framework plugins for Claude Code",
+  "name": "sensei-marketplace",
+  "description": "Teaching plugins for Claude Code",
   "owner": {
     "name": "jreynolds-dev"
   },
   "plugins": [
     {
-      "name": "sensei-framework",
-      "description": "A reusable, character-swappable teaching framework for Claude Code. Turn any project into a guided learning dojo with adaptive difficulty, spaced repetition, and rich session commands.",
+      "name": "sensei",
+      "description": "A reusable, character-swappable teaching plugin for Claude Code. Turn any project into a guided learning dojo with adaptive difficulty, spaced repetition, and rich session commands.",
       "version": "1.0.0",
       "author": {
         "name": "jreynolds-dev"
       },
       "source": {
         "type": "url",
-        "url": "https://github.com/jreynolds-dev/sensei-framework.git"
+        "url": "https://github.com/jreynolds-dev/sensei.git"
       },
       "category": "learning",
-      "homepage": "https://github.com/jreynolds-dev/sensei-framework"
+      "homepage": "https://github.com/jreynolds-dev/sensei"
     }
   ]
 }

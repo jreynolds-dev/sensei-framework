@@ -1,4 +1,4 @@
-# Sensei Framework -- Teaching Techniques
+# Sensei -- Teaching Techniques
 
 Named pedagogical techniques for developer education. The framework and commands reference these by name. Select techniques based on the student's current level and situation.
 
