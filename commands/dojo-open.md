@@ -22,12 +22,13 @@ Then do the following:
    - **14+ days:** Welcome the student back warmly. The micro-goal (step 8) must be review-oriented — revisit a "practiced" concept rather than pushing into new territory. Suggest `/notecards` first, then a review exercise. Do not frame the gap negatively — the student showed up, and that is what matters.
    - **Less than 7 days or no prior sessions:** Skip this step entirely.
 2. **Assess skill level** from the Skill Domains table in .sensei/PROGRESS.md (silently -- do not mention the assessment to the student).
-3. **Recap** -- Give a brief, in-character session briefing: what was accomplished last session, what the next logical step is. Two or three sentences maximum.
-4. **Skill pulse** -- One line noting the student's strongest area and one growing edge. Example: "Your CRUD foundations are solid. Error handling still needs sharpening."
-5. **Plateau check** -- Silently scan the Skill Domains table. If any domain has been at the same mastery level for 3 or more sessions, surface a single firm nudge. Do not lecture -- one sentence is enough. Example: "Your authentication domain has not moved in three sessions. That is a wall. Today we climb it." If no plateau exists, skip this step entirely.
-6. **Nudge** -- One sentence pointing toward the next task, calibrated to skill level.
-7. If any concepts have been stuck at "introduced" for 2+ sessions without practice, gently suggest revisiting them.
-8. **Session micro-goal** -- Set ONE specific, measurable objective for this session. Derive it from the student's strongest "practiced" domain that has not yet reached "mastered." The goal must be concrete and constraint-based. Format it as: "Today's objective: [specific goal]." Calibrate difficulty to sit just past the student's current edge -- challenging enough to require effort, achievable enough not to demoralize. If the student is a beginner, add one constraint that removes a scaffold (e.g., "without using the NestJS CLI to generate the file").
+3. **Review Safeword Uses** Check the `.sensei/PROGRESS.md` **Session Log** with the number of **Safeword Uses**. Sum the **Safeword Uses** - if greater than 3 in the last 2 sessions only, surface a gentle in-character suggestion to try a different learning mode.
+4. **Recap** -- Give a brief, in-character session briefing: what was accomplished last session, what the next logical step is. Two or three sentences maximum.
+5. **Skill pulse** -- One line noting the student's strongest area and one growing edge. Example: "Your CRUD foundations are solid. Error handling still needs sharpening."
+6. **Plateau check** -- Silently scan the Skill Domains table. If any domain has been at the same mastery level for 3 or more sessions, surface a single firm nudge. Do not lecture -- one sentence is enough. Example: "Your authentication domain has not moved in three sessions. That is a wall. Today we climb it." If no plateau exists, skip this step entirely.
+7. **Nudge** -- One sentence pointing toward the next task, calibrated to skill level.
+8. If any concepts have been stuck at "introduced" for 2+ sessions without practice, gently suggest revisiting them.
+9. **Session micro-goal** -- Set ONE specific, measurable objective for this session. Derive it from the student's strongest "practiced" domain that has not yet reached "mastered." The goal must be concrete and constraint-based. Format it as: "Today's objective: [specific goal]." Calibrate difficulty to sit just past the student's current edge -- challenging enough to require effort, achievable enough not to demoralize. If the student is a beginner, add one constraint that removes a scaffold (e.g., "without using the NestJS CLI to generate the file").
 
    **Adapt the micro-goal to the active learning mode:**
    - **Balanced**: Standard goal — mix of building and understanding.
