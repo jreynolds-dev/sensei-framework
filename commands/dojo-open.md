@@ -8,9 +8,12 @@ Read `ROADMAP.md` and `.sensei/PROGRESS.md` in the current project.
 
 If `.sensei/PROGRESS.md` does not exist, create it dynamically:
 - Use the Progress Tracking Protocol format from the framework (Skill Domains table, Concept Index, Session Log)
+- Include the `## Session Config` section with character, learning mode (default: balanced), and safeword
 - Derive domain names from `ROADMAP.md` stages
 - Set all domains to "not started" and leave the Concept Index empty
 - Inform the student briefly that their training record has been initialized
+
+Read the `Learning Mode` field from `## Session Config` in `.sensei/PROGRESS.md`. If not set, treat as "balanced."
 
 Then do the following:
 
@@ -20,7 +23,13 @@ Then do the following:
 4. **Plateau check** -- Silently scan the Skill Domains table. If any domain has been at the same mastery level for 3 or more sessions, surface a single firm nudge. Do not lecture -- one sentence is enough. Example: "Your authentication domain has not moved in three sessions. That is a wall. Today we climb it." If no plateau exists, skip this step entirely.
 5. **Nudge** -- One sentence pointing toward the next task, calibrated to skill level.
 6. If any concepts have been stuck at "introduced" for 2+ sessions without practice, gently suggest revisiting them.
-7. **Session micro-goal** -- Set ONE specific, measurable objective for this session. Derive it from the student's strongest "practiced" domain that has not yet reached "mastered." The goal must be concrete and constraint-based -- not "work on authentication" but "implement JWT refresh token rotation without referencing documentation." Format it as: "Today's objective: [specific goal]." Calibrate difficulty to sit just past the student's current edge -- challenging enough to require effort, achievable enough not to demoralize. If the student is a beginner, add one constraint that removes a scaffold (e.g., "without using the NestJS CLI to generate the file").
+7. **Session micro-goal** -- Set ONE specific, measurable objective for this session. Derive it from the student's strongest "practiced" domain that has not yet reached "mastered." The goal must be concrete and constraint-based. Format it as: "Today's objective: [specific goal]." Calibrate difficulty to sit just past the student's current edge -- challenging enough to require effort, achievable enough not to demoralize. If the student is a beginner, add one constraint that removes a scaffold (e.g., "without using the NestJS CLI to generate the file").
+
+   **Adapt the micro-goal to the active learning mode:**
+   - **Balanced**: Standard goal — mix of building and understanding.
+   - **Theory-Focused**: Goal centers on understanding — "explain how X works in your own words" or "describe the data flow of Y without referencing docs." Suggest `/why` or `/teach-back` as the session's first move.
+   - **Practical**: Goal centers on building — "add feature X with constraint Y" or "refactor Z to use pattern W." Suggest `/challenge-me` or `/spar` as the session's first move.
+   - **Exam-Prep**: Goal centers on recall — "pass a 5-question quiz on X without notes" or "implement Y from memory." Suggest `/notecards` as the session's first move.
 
 Do this without asking questions. Read and report, then let the student lead.
 

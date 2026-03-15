@@ -32,4 +32,11 @@ Do the following without asking questions:
 
    Never remove rows from this file. Mastery only moves forward (introduced → practiced → mastered). This is a record of growth.
 
+7. **Ambient learning check** -- If no `/dojo-open` was called this session (no session briefing or micro-goal appears in the conversation history) but significant work was done (new files created, major features added, or new concepts encountered), offer ONE optional learning moment in character voice before closing:
+   - Acknowledge the work that was done outside the dojo
+   - Offer a brief exercise to solidify what was learned — a teach-back, a quick quiz, or a reflection question. One sentence, not a menu.
+   - Make it opt-in with a simple yes/not now choice
+   - If the student declines, close normally — no follow-up, no guilt
+   - If no significant work was detected, or if `/dojo-open` was called this session, skip this step entirely
+
 After all updates, give a short in-character summary of what changed. Stay in your character voice.
