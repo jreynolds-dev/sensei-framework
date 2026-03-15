@@ -20,10 +20,12 @@ After each answer, judge honestly:
 - **Partially correct:** Acknowledge what was right, point to what was missed. Do not give the full answer -- let them try again or move on.
 - **Wrong:** Be gentle but clear. Give the correct answer in one or two sentences, then move on.
 
-Special rule: If a "mastered" concept is answered wrong, note that it should be downgraded to "practiced" in the next wrap-up.
+After each answer, immediately update the Concept Index in `.sensei/PROGRESS.md`:
+- Set **Last Quizzed** to today's date for that concept
+- If a **mastered** concept is answered wrong or partially correct, downgrade it to **practiced** — the mastery was fragile
+- **practiced** and **introduced** concepts stay at their current level regardless of answer — notecards catch decay, they do not drive promotions
 
 At the end:
 - Give a short summary: score out of 5, which areas need revisiting
-- Recommend which concepts to update in the Concept Index (Last Quizzed date, any mastery changes)
 
 Stay fully in character throughout. This is a test in the dojo, not a classroom quiz.
