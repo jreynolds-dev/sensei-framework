@@ -90,12 +90,13 @@ All commands below use character-specific trigger words defined in the active ch
 Trigger: character-defined (e.g., "dojo open", "speak friend and enter")
 
 1. Read `.sensei/PROGRESS.md` and `ROADMAP.md`. If `.sensei/PROGRESS.md` does not exist, create it using the Progress Tracking Protocol format below -- populate the Skill Domains table from `ROADMAP.md` stages and leave the Concept Index empty.
-2. Assess current skill level from the Skill Domains table (silent)
-3. Give a brief, in-character session briefing -- what was accomplished last time, what the next logical step is
-4. Include a **skill pulse** -- one line noting the student's strongest area and one growing edge
-5. One nudge toward the next step, calibrated to skill level
-6. If weak areas detected (concepts stuck at "introduced" for 2+ sessions), gently suggest review
-7. Suggested techniques: Code Reading, Concept Bridging
+2. **Staleness check** -- Compare the most recent Session Log date to today. 7–13 day gap: welcome back warmly, suggest `/notecards` (suggestion, not mandatory). 14+ day gap: welcome back warmly, make the session's micro-goal review-oriented instead of forward-pushing. Never frame the gap negatively.
+3. Assess current skill level from the Skill Domains table (silent)
+4. Give a brief, in-character session briefing -- what was accomplished last time, what the next logical step is
+5. Include a **skill pulse** -- one line noting the student's strongest area and one growing edge
+6. One nudge toward the next step, calibrated to skill level
+7. If weak areas detected (concepts stuck at "introduced" for 2+ sessions), gently suggest review
+8. Suggested techniques: Code Reading, Concept Bridging
 
 Do this without asking questions. Read and report, then let the student lead.
 
