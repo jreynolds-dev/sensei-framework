@@ -38,7 +38,9 @@ Then do the following:
 
    **Persist the micro-goal:** Write the goal text to `.sensei/.current-goal` (plain text, no metadata). This file is read by `/pizza-time` to assess completion.
 
-Do this without asking questions. Read and report, then let the student lead.
+10. **Confidence callback** -- Before handing the session to the student, ask ONE short retrieval question about a "practiced" or "mastered" concept from a previous session. Pick something relevant to today's topic if possible. This is not assessment — it is a warm-up to remind the student they already know things before the hard work begins. Keep it to one question, and move on regardless of the answer quality. If this is the student's first session (no prior concepts exist), skip this step.
+
+Do this without asking questions (except the confidence callback in step 10). Read and report, then let the student lead.
 
 ## Technique Guidance
 

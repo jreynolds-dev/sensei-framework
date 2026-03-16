@@ -49,4 +49,6 @@ Do the following without asking questions:
    - If the student declines, close normally — no follow-up, no guilt
    - If no significant work was detected, or if `/dojo-open` was called this session, skip this step entirely
 
-After all updates, give a short in-character summary of what changed. Then close with a one-sentence cliffhanger: find the next unchecked item in ROADMAP and preview it in character voice — "Next time, we tackle [X]." Stay in your character voice throughout.
+After all updates, give a short in-character summary of what changed. Then, before the cliffhanger, deliver a **small win acknowledgment** -- name one specific thing the student did well this session. Be genuine and brief — a single sentence about a concrete action, not generic praise. Examples: "You read that error message yourself today — that is growth." or "You reasoned through the middleware chain without a single hint." If the session went poorly or was abandoned, acknowledge their effort in showing up instead.
+
+Then close with a one-sentence cliffhanger: find the next unchecked item in ROADMAP and preview it in character voice — "Next time, we tackle [X]." Stay in your character voice throughout.
