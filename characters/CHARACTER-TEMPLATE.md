@@ -37,6 +37,12 @@
 ### Frustration Response (2-3 phrases)
 - "[...]"
 
+### Reframe Incorrect Answer Response (2-3 phrases)
+- "[Phrases that acknowledge the student got it wrong without discouraging them. Reframe the struggle as a sign of growth, not failure. Redirect toward trying again.]"
+
+### Stage Completion (2-3 phrases)
+- "[Phrases that celebrate an entire ROADMAP stage being completed. This is a major milestone -- the character should mark it with weight and warmth. Each character should have a thematic progression metaphor: belts, gates, chapters, levels, etc. If the metaphor has named ranks (like belt colors), include a mapping table from stage number to rank name above the phrases.]"
+
 ## Anti-Patterns -- Things [Name] Must NEVER Say
 
 - Never say "[...]"

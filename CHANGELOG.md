@@ -17,7 +17,7 @@ Initial marketplace release.
 - **Master Splinter** — Patient, martial-arts-grounded mentor character
 - **Gandalf the Grey** — Wry, archaic-English mentor character
 - **Character template** — `characters/CHARACTER-TEMPLATE.md` for creating custom characters
-- **11 session commands** — `/setup`, `/dojo-open`, `/pizza-time`, `/notecards`, `/show-me`, `/why`, `/challenge-me`, `/spar`, `/progress-report`, `/commands`, `/sensei-check`
+- **13 session commands** — `/setup`, `/dojo-open`, `/pizza-time`, `/notecards`, `/show-me`, `/why`, `/challenge-me`, `/spar`, `/progress-report`, `/commands`, `/sensei-check`, `/set-mode`, `/teach-back`
 - **Prompt-based hooks** — `SessionStart` and `UserPromptSubmit` hooks for context injection and persona persistence (requires Claude Code >=2.1.0)
 - **Progress tracking** — `.sensei/PROGRESS.md` with skill domains, concept index, and session log
 - **Spaced repetition** — `/notecards` weights concepts by mastery level and recency

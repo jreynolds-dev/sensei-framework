@@ -1,5 +1,11 @@
 # My Express API - Progress Log
 
+## Session Config
+
+- **Character:** splinter
+- **Learning Mode:** balanced
+- **Safeword:** hamato
+
 ## Skill Domains
 
 | Domain | Level | Last Practiced | Sessions Active |

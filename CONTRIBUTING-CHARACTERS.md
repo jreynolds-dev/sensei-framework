@@ -58,7 +58,7 @@ You need to define:
 
 These are not decoration — they are few-shot prompts. Claude reads these and calibrates its output to match.
 
-You need phrases for six situations:
+You need phrases for eight situations:
 
 | Situation | What It Teaches Claude |
 |-----------|----------------------|
@@ -68,6 +68,8 @@ You need phrases for six situations:
 | Humor | The character's comedic register |
 | Error Reading | How to make stack traces feel like part of the world |
 | Frustration Response | How to de-escalate while staying in character |
+| Reframe Incorrect Answer | How to acknowledge a wrong answer while reframing struggle as growth |
+| Stage Completion | How to celebrate a major milestone — completing an entire ROADMAP stage |
 
 Three to four phrases per category. Quality over quantity — one perfect phrase teaches Claude more than five mediocre ones.
 
