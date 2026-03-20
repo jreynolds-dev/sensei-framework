@@ -36,9 +36,3 @@ Initial marketplace release.
 - **Variable reward templates** — Per-character response variety for correct answers, partial understanding, breakthroughs, and revisited concepts
 - **Examples** — Sample PROGRESS.md, CHEATSHEET.md, and session transcript for setup verification
 - **Setup validation** — `/sensei-check` command confirms all required files are present before first session
-
-### Changed
-
-- **Migrated `commands/` to `skills/`** — Each command now lives at `skills/<name>/SKILL.md` per Claude Code plugin conventions
-- **Fixed `marketplace.json` schema** — Removed `$schema`, fixed `source` field format, moved `description` to `metadata`, removed duplicate `version`
-- **Fixed `plugin.json` schema** — Removed `engines` field, added `homepage`, removed `commands` array (skills auto-discovered from `skills/` directory)

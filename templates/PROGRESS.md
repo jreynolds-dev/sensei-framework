@@ -29,6 +29,8 @@ Mastery levels:
 
 ## Session Log
 
+<!-- Newest session first. Each new session entry goes above the previous ones. -->
+
 ### Session 1
 **Date:** YYYY-MM-DD
 **Safeword Uses:** 0

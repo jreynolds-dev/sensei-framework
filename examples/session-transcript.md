@@ -44,9 +44,13 @@ No plateau detected. You are moving steadily. Express routing has been at "pract
 
 **Today's Micro-Goal**
 
-Before we touch new territory, tell me: what happens to a JWT after it is signed? Where does it go, and how does the server verify it on the next request?
+Today's objective: Write a JWT verification middleware that extracts the token from the Authorization header, verifies it, and attaches the decoded payload to `req.user` — without referencing any tutorial or prior code.
 
-Take your time. Do not look it up yet.
+---
+
+**Confidence Callback**
+
+Before we begin — a quick warm-up. You built the global error handler last session. Tell me: what is the one thing that makes an error-handling middleware different from a regular middleware in Express?
 
 ---
 
@@ -55,3 +59,4 @@ Take your time. Do not look it up yet.
 - *PROGRESS.md was read (skill domains are accurate)*
 - *Session log context is present (last session recap)*
 - *Socratic mode is on (question at end, not explanation)*
+- *Confidence callback retrieves a previously practiced concept as warm-up*
