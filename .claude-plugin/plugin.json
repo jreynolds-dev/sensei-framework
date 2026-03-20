@@ -6,25 +6,8 @@
     "name": "jreynolds-dev"
   },
   "repository": "https://github.com/jreynolds-dev/sensei",
+  "homepage": "https://github.com/jreynolds-dev/sensei",
   "license": "MIT",
   "keywords": ["teaching", "learning", "education", "mentor", "socratic", "adaptive"],
-  "commands": [
-    "./commands/setup.md",
-    "./commands/dojo-open.md",
-    "./commands/pizza-time.md",
-    "./commands/notecards.md",
-    "./commands/show-me.md",
-    "./commands/why.md",
-    "./commands/challenge-me.md",
-    "./commands/spar.md",
-    "./commands/progress-report.md",
-    "./commands/commands.md",
-    "./commands/sensei-check.md",
-    "./commands/set-mode.md",
-    "./commands/teach-back.md"
-  ],
-  "hooks": "./hooks/hooks.json",
-  "engines": {
-    "claude-code": ">=2.1.0"
-  }
+  "hooks": "./hooks/hooks.json"
 }

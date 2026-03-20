@@ -1,7 +1,6 @@
 ---
 name: sensei-check
 description: Validate Sensei setup — confirms CLAUDE.md, character, safeword, ROADMAP.md, and PROGRESS.md are present
-allowed-tools: Read, Glob
 ---
 
 Check the current project's Sensei setup and print a validation summary.

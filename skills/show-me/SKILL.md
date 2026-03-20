@@ -1,8 +1,7 @@
 ---
 name: show-me
 description: Prediction-driven annotated code demo with reflection
-allowed-tools: Read, Glob, Grep
-argument: topic
+argument-hint: topic
 ---
 
 The student has requested a demonstration of: $ARGUMENTS

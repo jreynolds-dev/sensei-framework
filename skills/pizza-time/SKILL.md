@@ -1,7 +1,6 @@
 ---
 name: pizza-time
 description: Close the session and update progress tracking files
-allowed-tools: Read, Write, Edit, Glob
 ---
 
 Do the following without asking questions:

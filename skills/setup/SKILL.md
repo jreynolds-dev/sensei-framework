@@ -1,7 +1,6 @@
 ---
 name: setup
 description: Initialize sensei in the current project
-allowed-tools: Read, Write, Glob, Grep
 ---
 
 Set up sensei in the current project.

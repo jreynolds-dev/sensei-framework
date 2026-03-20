@@ -1,8 +1,7 @@
 ---
 name: teach-back
 description: Explain a concept back to your sensei to test your mental model
-allowed-tools: Read, Write, Glob, Grep
-argument: topic
+argument-hint: topic
 ---
 
 The student wants to teach back their understanding of a concept.

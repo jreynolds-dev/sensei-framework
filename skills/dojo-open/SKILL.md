@@ -1,7 +1,6 @@
 ---
 name: dojo-open
 description: Open a teaching session with briefing and skill pulse
-allowed-tools: Read, Write, Glob
 ---
 
 Read `ROADMAP.md` and `.sensei/PROGRESS.md` in the current project.

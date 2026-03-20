@@ -1,8 +1,7 @@
 ---
 name: why
 description: Deep-dive into the reasoning behind a pattern or concept
-allowed-tools: Read, Glob, Grep
-argument: pattern or concept
+argument-hint: concept
 ---
 
 The student wants to understand the deeper reasoning behind: $ARGUMENTS

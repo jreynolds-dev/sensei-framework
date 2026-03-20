@@ -1,7 +1,6 @@
 ---
 name: notecards
 description: Quiz the student using spaced repetition from the Concept Index
-allowed-tools: Read, Edit
 ---
 
 Read `.sensei/PROGRESS.md`, specifically the Concept Index table.

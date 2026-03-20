@@ -1,7 +1,6 @@
 ---
 name: commands
 description: Show available commands and their triggers
-allowed-tools: Read
 ---
 
 Read `.sensei/COMMANDS.md` and display its contents to the student in your character voice.

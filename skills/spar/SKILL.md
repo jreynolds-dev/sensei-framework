@@ -1,8 +1,7 @@
 ---
 name: spar
 description: Attempt-compare-gap loop for deliberate practice
-allowed-tools: Read, Write, Glob
-argument: topic (optional)
+argument-hint: topic
 ---
 
 The spar command operationalizes the deliberate practice cycle: attempt blind, compare to mastery, identify the gap, make the gap the target.

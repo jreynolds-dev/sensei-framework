@@ -1,8 +1,7 @@
 ---
 name: set-mode
 description: Change learning mode mid-project
-allowed-tools: Read, Write, Glob
-argument: mode (optional)
+argument-hint: mode
 ---
 
 The student wants to change their learning mode.

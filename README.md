@@ -1,95 +1,110 @@
 # Sensei
 
-A reusable, character-swappable teaching plugin for [Claude Code](https://claude.ai/claude-code). Turn any project into a guided learning dojo with adaptive difficulty, spaced repetition quizzes, and rich session commands.
+A character-driven teaching plugin for [Claude Code](https://claude.ai/claude-code). Sensei turns any project into a guided learning dojo — Socratic by default, adaptive to your level, with spaced repetition and progress tracking built in.
 
-## What It Does
+There is no serious teaching plugin in the Claude Code ecosystem. Sensei is the first comprehensive one: research-backed pedagogy, strict character voice, and a session loop that actually tracks what you know.
 
-Sensei transforms Claude Code into a patient, in-character mentor who:
+## Why Sensei, Not Just Claude?
 
-- **Teaches through questions**, not answers (Socratic method by default)
-- **Adapts difficulty** based on your tracked progress -- beginner gets more analogies, advanced gets more challenges
-- **Tracks mastery** per concept with spaced repetition for quiz review
-- **Stays in character** with strict voice rules, anti-patterns, and edge case handling
-- **Works with any character** -- ships with Master Splinter and Gandalf, or create your own
+Claude is brilliant but permissive. Ask it to explain something and it hands you the answer. That feels helpful. Research says it cuts learning gains in half.
 
-## Architecture
+Sensei fixes this:
 
-Three layers compose together:
+- **Socratic by default** — Claude asks guiding questions instead of giving answers. Code is gated behind a safeword.
+- **Adaptive difficulty** — Beginner gets analogies and small steps. Advanced gets trade-offs and challenges. Calibrated per domain, not globally.
+- **Spaced repetition** — The `/notecards` quiz weights concepts by mastery and recency. Mastery decays if you get it wrong.
+- **Character voice** — Not a gimmick. Strict voice rules, anti-patterns, and drift correction keep the character consistent across sessions. Ships with Master Splinter and Gandalf the Grey.
+- **Session structure** — Open with `/dojo-open`, close with `/pizza-time`. Progress is tracked, goals are set, and every session ends with a cliffhanger.
 
-```
-Layer 1: Framework Core    -- Teaching philosophy, adaptive difficulty, commands, progress tracking, named techniques
-Layer 2: Character Pack    -- Voice rules, example phrases, anti-patterns, command triggers
-Layer 3: Project Config    -- Your CLAUDE.md with project description, conventions, character selection
-```
-
-## Quick Start (5 minutes)
+## Quick Start
 
 ### Option A: Plugin Install (Recommended)
 
 ```bash
-# Add the marketplace (one-time)
-claude plugin marketplace add jreynolds-dev/sensei
-
-# Install the plugin
-claude plugin install sensei
+# Install from marketplace
+claude plugin add sensei
 ```
 
-Then in your project, run `/setup` -- Splinter introduces himself, asks four guided questions, and generates a populated `ROADMAP.md` and `CLAUDE.md` tailored to your project. A `.sensei/` folder is created with a `COMMANDS.md` quick-reference for your chosen character. `.sensei/PROGRESS.md` is created automatically on first `/dojo-open`.
+Then in your project:
+
+```
+/sensei:setup
+```
+
+Your character introduces themselves, asks about your project and goals, and generates a tailored `ROADMAP.md` and `CLAUDE.md`. A `.sensei/` folder is created for progress tracking.
+
+Start your first session with `/sensei:dojo-open`.
 
 ### Option B: Manual Assembly
 
 1. Clone this repo
-2. Copy the contents of `framework/FRAMEWORK.md` into your project's `CLAUDE.md`
-3. Copy the contents of your chosen character file (e.g., `characters/splinter.md`) below it
-4. Add your project-specific config at the bottom (see `templates/CLAUDE.md.template`)
-5. Create a `ROADMAP.md` with your project stages (see `templates/ROADMAP.md`)
+2. Load as a local plugin: `claude --plugin-dir /path/to/sensei`
+3. Run `/sensei:setup` in your project
 
-`PROGRESS.md` is created automatically on first session open -- no need to copy a template.
+Or, for fully manual setup without the plugin system:
 
-## Commands
+1. Copy `framework/FRAMEWORK.md` into your project's `CLAUDE.md`
+2. Append your chosen character file (e.g., `characters/splinter.md`)
+3. Add the active rules and project config sections from `templates/CLAUDE.md.template`
+4. Create a `ROADMAP.md` with your project stages (see `templates/ROADMAP.md`)
 
-| Command | What It Does |
-|---------|-------------|
-| `/setup` | Initialize the dojo: onboarding flow for new projects, character selection, generates `.sensei/COMMANDS.md` |
-| `/dojo-open` | Open a session: recap, skill pulse, plateau check, and today's micro-goal |
-| `/pizza-time` | Close the session, update all tracking files and cheat sheet |
-| `/notecards` | Spaced repetition quiz (5 questions) |
-| `/show-me <topic>` | Annotated code demo with follow-up question |
-| `/why <concept>` | Deep-dive into why a pattern exists |
-| `/challenge-me [topic]` | Project-relevant exercise with acceptance criteria |
-| `/spar [topic]` | Deliberate practice loop: blind attempt → reference reveal → gap analysis |
-| `/progress-report` | Visual mastery summary, plateau detection, and recommendations |
-| `/sensei-check` | Validate setup: confirms CLAUDE.md, character, safeword, ROADMAP.md, and PROGRESS.md are present |
-| `/commands` | Show all available commands and trigger phrases in your character's voice |
+Note: manual setup requires copying the active rules section (code gate, voice rules) exactly as shown in the template. `/setup` does this automatically.
 
-The safeword (e.g., "hamato" for Splinter) is typed directly -- no slash command needed. It drops all teaching and gives a direct answer.
+## Skills
 
-Character-flavored trigger phrases also work (e.g., "dojo open" instead of `/dojo-open`).
+All skills are namespaced as `/sensei:<name>` when installed as a plugin. Character-flavored trigger phrases also work (e.g., "dojo open" instead of `/sensei:dojo-open`).
 
-Once set up, check `.sensei/COMMANDS.md` in your project for a quick-reference card with your character's specific trigger phrases.
+| Skill | What It Does |
+|-------|-------------|
+| `/setup` | Initialize the dojo: onboarding, character selection, generates ROADMAP.md and CLAUDE.md |
+| `/dojo-open` | Open a session: recap, skill pulse, plateau check, confidence callback, micro-goal |
+| `/pizza-time` | Close the session: update all tracking files, stage celebrations, small win, cliffhanger |
+| `/notecards` | Spaced repetition quiz — 5 concepts weighted by mastery and recency |
+| `/show-me <topic>` | Prediction-driven annotated code demo with reflection |
+| `/why <concept>` | Deep-dive into why a pattern exists and when not to use it |
+| `/challenge-me [topic]` | Project-relevant exercise with acceptance criteria and constraints |
+| `/spar [topic]` | Deliberate practice: blind attempt, reference reveal, gap analysis |
+| `/teach-back [topic]` | Explain a concept back to test your mental model |
+| `/progress-report` | Visual mastery summary, plateau detection, recommendations |
+| `/set-mode [mode]` | Switch learning mode (Balanced, Theory-Focused, Practical, Exam-Prep) |
+| `/sensei-check` | Validate setup: confirms all required files are present |
+| `/commands` | Show available commands in your character's voice |
+
+The safeword (e.g., "hamato" for Splinter, "gandalf please" for Gandalf) drops all teaching and gives a direct answer. No slash command needed.
 
 ## Available Characters
 
 ### Master Splinter (`splinter`)
-Patient, wise, occasionally stern. Speaks without contractions. Draws from martial arts and nature. Addresses you as "my son."
+Patient, wise, occasionally stern. No contractions. Martial arts and nature metaphors. Addresses you as "my son." Stage completions earn belt colors.
 
 ### Gandalf the Grey (`gandalf`)
-Ancient, wry, exasperated by mortal stubbornness. Slightly archaic English. Draws from journeys and Middle-earth. Addresses you as "my dear hobbit."
+Ancient, wry, exasperated by mortals. Slightly archaic English. Journey and light/shadow metaphors. Addresses you as "my dear hobbit."
 
 ### Create Your Own
-Copy `characters/CHARACTER-TEMPLATE.md` and fill in the sections. The template guides you through identity, voice rules, example phrases, anti-patterns, edge cases, and command triggers.
+See [CONTRIBUTING-CHARACTERS.md](CONTRIBUTING-CHARACTERS.md) for the full guide, or start from `characters/CHARACTER-TEMPLATE.md`.
 
-## Adaptive Difficulty
+## Learning Modes
 
-The framework silently reads your `.sensei/PROGRESS.md` Skill Domains table and adjusts its behavior:
+Set during `/setup` or change anytime with `/set-mode`.
 
-- **Beginner** (mostly "not started"/"introduced"): More analogies, smaller steps, always explains why
+| Mode | Focus |
+|------|-------|
+| **Balanced** | Even mix of theory, practice, and application |
+| **Theory-Focused** | Deep conceptual understanding, mental models, first principles |
+| **Practical** | Project-based, learn-by-doing, immediate application |
+| **Exam-Prep** | Recall, practice tests, active retrieval |
+
+Each character has flavored names for the modes (e.g., Splinter's "Root Before Branch" for Theory-Focused).
+
+## How Difficulty Adapts
+
+The framework silently reads your `.sensei/PROGRESS.md` and adjusts per domain:
+
+- **Beginner** (mostly "not started"/"introduced"): More analogies, smaller steps, explicit prerequisite checks
 - **Intermediate** (mostly "practiced"): Expects you to try first, gives pointers not paths
 - **Advanced** (mostly "mastered"): Challenges assumptions, introduces trade-offs, minimal hand-holding
 
-This is per-domain -- being advanced at CRUD does not mean advanced at auth.
-
-**How it works:** At session open, `PROGRESS.md` is included in Claude's context window. The framework instructs Claude to read the Skill Domains table and calibrate its responses accordingly. Adaptation is reliable for typical progress files but may degrade in very long sessions where context window pressure is high. If you notice responses feeling miscalibrated, running `/dojo-open` reloads the context.
+Being advanced at CRUD does not mean advanced at auth. Adaptation is per-concept.
 
 ## Progress Tracking
 
@@ -98,57 +113,54 @@ All learning files live in `.sensei/` to keep your project root clean:
 | File | Created By | Purpose |
 |------|-----------|---------|
 | `.sensei/PROGRESS.md` | `/dojo-open` | Skill domains, concept index, session log |
-| `.sensei/CHEATSHEET.md` | `/pizza-time` | One-line summaries of every concept you've learned |
+| `.sensei/CHEATSHEET.md` | `/pizza-time` | One-line summaries of every learned concept |
 | `.sensei/COMMANDS.md` | `/setup` | Quick-reference for your character's trigger phrases |
 
-`.sensei/PROGRESS.md` uses a structured format:
+Mastery levels: `not started` → `introduced` → `practiced` → `mastered`
 
-- **Skill Domains table** -- high-level mastery per topic area
-- **Concept Index** -- granular tracking of every concept with mastery level, quiz history
-- **Session Log** -- narrative record with observations for adaptive calibration
-
-Mastery levels: `not started` -> `introduced` -> `practiced` -> `mastered`
-
-The `/notecards` command uses spaced repetition: concepts at lower mastery and those not recently quizzed get asked more frequently.
+Mastery can decay: wrong quiz answers downgrade mastery. The system catches concepts that looked solid but weren't.
 
 ## File Structure
 
 ```
 sensei/
 ├── .claude-plugin/
-│   └── plugin.json              # Plugin metadata
+│   ├── plugin.json                # Plugin manifest
+│   └── marketplace.json           # Marketplace listing
+├── skills/
+│   ├── setup/SKILL.md             # Project initialization
+│   ├── dojo-open/SKILL.md         # Session open with skill pulse
+│   ├── pizza-time/SKILL.md        # Session close with progress updates
+│   ├── notecards/SKILL.md         # Spaced repetition quiz
+│   ├── show-me/SKILL.md           # Annotated code demo
+│   ├── why/SKILL.md               # Deep-dive reasoning
+│   ├── challenge-me/SKILL.md      # Project-relevant exercise
+│   ├── spar/SKILL.md              # Deliberate practice loop
+│   ├── teach-back/SKILL.md        # Concept explanation and validation
+│   ├── progress-report/SKILL.md   # Visual mastery summary
+│   ├── set-mode/SKILL.md          # Change learning mode
+│   ├── commands/SKILL.md          # Show available commands
+│   └── sensei-check/SKILL.md      # Setup validation
 ├── hooks/
-│   └── hooks.json               # SessionStart hook config
-├── hooks-handlers/
-│   └── README.md                # Documents the original shell hooks and why they were replaced
-├── commands/
-│   ├── setup.md                 # Project initialization
-│   ├── dojo-open.md             # Session open with skill pulse
-│   ├── pizza-time.md            # Session close with mastery updates
-│   ├── notecards.md             # Spaced repetition quiz
-│   ├── show-me.md               # Annotated code demo
-│   ├── why.md                   # Deep-dive reasoning
-│   ├── challenge-me.md          # Project-relevant exercise
-│   ├── spar.md                  # Deliberate practice loop
-│   ├── progress-report.md       # Visual mastery summary with plateau detection
-│   ├── commands.md              # Show available commands in character voice
-│   └── sensei-check.md          # Setup validation
+│   └── hooks.json                 # SessionStart and UserPromptSubmit hooks
 ├── characters/
-│   ├── splinter.md              # Master Splinter voice pack
-│   ├── splinter-commands.md     # Splinter command reference card (copied to .sensei/ on setup)
-│   ├── gandalf.md               # Gandalf voice pack
-│   ├── gandalf-commands.md      # Gandalf command reference card (copied to .sensei/ on setup)
-│   └── CHARACTER-TEMPLATE.md    # Blank template for custom characters
-├── templates/
-│   ├── CLAUDE.md.template       # Slim project-level config
-│   └── ROADMAP.md               # Standard roadmap template
+│   ├── splinter.md                # Master Splinter voice pack
+│   ├── splinter-commands.md       # Splinter command reference card
+│   ├── gandalf.md                 # Gandalf voice pack
+│   ├── gandalf-commands.md        # Gandalf command reference card
+│   └── CHARACTER-TEMPLATE.md      # Template for custom characters
 ├── framework/
-│   ├── FRAMEWORK.md             # Core teaching engine
-│   └── SKILLS.md                # Named teaching techniques catalog
+│   ├── FRAMEWORK.md               # Core teaching engine
+│   └── SKILLS.md                  # Named teaching techniques catalog
+├── templates/
+│   ├── CLAUDE.md.template         # Project-level config template (for manual setup)
+│   └── ROADMAP.md                 # Standard roadmap template
 ├── examples/
-│   ├── PROGRESS.md              # Sample completed progress file
-│   ├── CHEATSHEET.md            # Sample concept cheat sheet
-│   └── session-transcript.md    # Sample /dojo-open output for setup verification
+│   ├── PROGRESS.md                # Sample completed progress file
+│   ├── CHEATSHEET.md              # Sample concept cheat sheet
+│   └── session-transcript.md      # Sample /dojo-open output
+├── CONTRIBUTING-CHARACTERS.md     # Guide for community character authors
+├── CHANGELOG.md
 ├── README.md
 └── LICENSE
 ```

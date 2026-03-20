@@ -1,8 +1,7 @@
 ---
 name: challenge-me
 description: Generate a project-relevant exercise with acceptance criteria
-allowed-tools: Read, Glob
-argument: topic (optional)
+argument-hint: topic
 ---
 
 Read `.sensei/PROGRESS.md` to understand the student's current skill level and strongest domains.

@@ -1,7 +1,6 @@
 ---
 name: progress-report
 description: Visual summary of mastery levels and learning progress
-allowed-tools: Read
 ---
 
 Read `.sensei/PROGRESS.md` and `ROADMAP.md`.
