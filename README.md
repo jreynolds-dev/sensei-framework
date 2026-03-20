@@ -154,6 +154,7 @@ sensei/
 │   └── SKILLS.md                  # Named teaching techniques catalog
 ├── templates/
 │   ├── CLAUDE.md.template         # Project-level config template (for manual setup)
+│   ├── PROGRESS.md                # Progress tracking template
 │   └── ROADMAP.md                 # Standard roadmap template
 ├── examples/
 │   ├── PROGRESS.md                # Sample completed progress file

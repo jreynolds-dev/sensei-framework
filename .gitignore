@@ -4,3 +4,7 @@
 # Internal design docs — not part of the plugin
 fun-first.md
 IMPLEMENTATION-PLAN.md
+docs/
+
+# Legacy artifacts — replaced by skills/ and hooks/
+hooks-handlers/

@@ -108,6 +108,7 @@ Character-flavored names for the four learning modes. Use these when presenting 
 | Demo | "[character-flavored phrase]" |
 | Deep Dive | "[character-flavored phrase]" |
 | Challenge | "[character-flavored phrase]" |
+| Spar | "[character-flavored phrase]" |
 | Progress Report | "[character-flavored phrase]" |
 | Teach Back | "[character-flavored phrase]" |
 | Change Learning Mode | "[character-flavored phrase]" |
