@@ -8,6 +8,5 @@
   "repository": "https://github.com/jreynolds-dev/sensei",
   "homepage": "https://github.com/jreynolds-dev/sensei",
   "license": "MIT",
-  "keywords": ["teaching", "learning", "education", "mentor", "socratic", "adaptive"],
-  "hooks": "./hooks/hooks.json"
+  "keywords": ["teaching", "learning", "education", "mentor", "socratic", "adaptive"]
 }
