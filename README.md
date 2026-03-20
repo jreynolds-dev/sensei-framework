@@ -162,6 +162,7 @@ sensei/
 │   └── session-transcript.md      # Sample /dojo-open output
 ├── CONTRIBUTING-CHARACTERS.md     # Guide for community character authors
 ├── CHANGELOG.md
+├── CODEOWNERS
 ├── README.md
 └── LICENSE
 ```
