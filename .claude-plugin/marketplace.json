@@ -14,8 +14,8 @@
         "name": "jreynolds-dev"
       },
       "source": {
-        "source": "url",
-        "url": "https://github.com/jreynolds-dev/sensei.git"
+        "source": "github",
+        "repo": "jreynolds-dev/sensei"
       },
       "category": "learning",
       "homepage": "https://github.com/jreynolds-dev/sensei"
