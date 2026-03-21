@@ -8,7 +8,7 @@ The student wants to change their learning mode.
 
 ## Flow
 
-1. Read `.sensei/PROGRESS.md` to find the current `## Session Config` section and the active character.
+1. Read `.sensei/CONFIG.md` to find the active character name (from `## Character:` line). Read `.sensei/PROGRESS.md` to find the current `## Session Config` section and active learning mode.
 2. Read the active character's `## Learning Modes` section to get the character-flavored mode names.
 
 ### If a mode argument was provided (`$ARGUMENTS`)

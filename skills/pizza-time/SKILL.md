@@ -23,7 +23,7 @@ Do the following without asking questions:
    - For each newly completed stage (in stage order), deliver a celebration moment: state the milestone in character voice naming the completed stage, then deliver a character celebration phrase from the `### Stage Completion` example phrases in the active character pack. If the character's Stage Completion section includes contextual placeholders or progression metadata (such as belt color mappings), resolve them using information from that character's file.
    - Append the stage completion(s) to the **Observations** line already written in step 4 (e.g., append "Completed Stage 3 -- Authentication").
    - If no stages were newly completed, skip this step silently.
-7. **Update CLAUDE.md:** Update the "Current State" section at the bottom with the current project status.
+7. **Update .sensei/CONFIG.md:** Update the `## Current State` section with the current project status.
 8. **Update .sensei/CHEATSHEET.md:**
    - If the file does not exist, create it with the header below and an empty table.
    - For every concept that moved to "practiced" or "mastered" this session, add a row. If the concept already has a row, update only the Mastery column -- do not overwrite the summary.

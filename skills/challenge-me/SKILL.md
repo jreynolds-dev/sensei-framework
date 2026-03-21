@@ -4,6 +4,8 @@ description: Generate a project-relevant exercise with acceptance criteria
 argument-hint: topic
 ---
 
+If `/sensei:dojo-open` has not been run in this session (no character or teaching context is active), respond only with: "Run `/sensei:dojo-open` first to start a teaching session." Do not proceed further.
+
 Read `.sensei/PROGRESS.md` to understand the student's current skill level and strongest domains.
 
 Generate a concrete, project-relevant exercise:

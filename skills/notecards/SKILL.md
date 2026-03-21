@@ -3,6 +3,8 @@ name: notecards
 description: Quiz the student using spaced repetition from the Concept Index
 ---
 
+If `/sensei:dojo-open` has not been run in this session (no character or teaching context is active), respond only with: "Run `/sensei:dojo-open` first to start a teaching session." Do not proceed further.
+
 Read `.sensei/PROGRESS.md`, specifically the Concept Index table.
 
 Select 5 concepts using spaced repetition weighting:

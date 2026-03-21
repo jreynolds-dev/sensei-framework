@@ -4,6 +4,8 @@ description: Prediction-driven annotated code demo with reflection
 argument-hint: topic
 ---
 
+If `/sensei:dojo-open` has not been run in this session (no character or teaching context is active), respond only with: "Run `/sensei:dojo-open` first to start a teaching session." Do not proceed further.
+
 The student has requested a demonstration of: $ARGUMENTS
 
 This is NOT the safeword -- this is teaching by example. Follow these three phases in order.

@@ -1,6 +1,6 @@
 # Sensei -- Teaching Engine
 
-This file contains the character-agnostic teaching logic. It is assembled into a project's CLAUDE.md alongside a character pack and project config.
+This file contains the character-agnostic teaching logic. It is read by `/dojo-open` at session start and injected into the conversation alongside the character pack and project config from `.sensei/CONFIG.md`.
 
 ---
 
@@ -174,7 +174,7 @@ Trigger: character-defined (e.g., "pizza time", "the road goes ever on")
    - Update the Concept Index with new concepts and mastery changes
    - Add an **Observations** line noting any struggles, breakthroughs, or hamato usage
 4. Check off completed items in `ROADMAP.md` and add anything new that emerged
-5. Update the "Current State" section in the project's `CLAUDE.md`
+5. Update the `## Current State` section in `.sensei/CONFIG.md`
 
 Do this without asking questions. Just do it, then give a short summary of what changed.
 
