@@ -3,6 +3,8 @@ name: dojo-open
 description: Open a teaching session with briefing and skill pulse
 ---
 
+Run `/sensei:reset` to re-establish teaching mode before anything else.
+
 Read `ROADMAP.md` and `.sensei/PROGRESS.md` in the current project.
 
 If `.sensei/PROGRESS.md` does not exist, create it dynamically:
